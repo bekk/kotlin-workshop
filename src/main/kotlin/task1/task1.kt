@@ -1,5 +1,5 @@
 package no.bekk.kotlinworkshop
 
-fun main(args: Array<String>) {
+fun main() { // Parameters to main method is no longer needed as of Kotlin 1.3
     println("test")
 }
