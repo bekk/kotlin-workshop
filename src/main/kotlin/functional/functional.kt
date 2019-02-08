@@ -26,7 +26,6 @@ fun main(args: Array<String>) {
  *
  * task01 - Use .map to make a list of all names and return this
  *
- *
  * task02 - Use .filter to make a list of all names of people which are over the age of 24
  *
  * task03 - Use sumBy to easily get the sum age of all people

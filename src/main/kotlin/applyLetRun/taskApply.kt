@@ -1,16 +1,16 @@
 package applyLetRun
 
-import utils.classEqualFieldNames
+import utils.classEqualFieldNamesAndTypes
 import utils.tests
 
 
-fun main(args: Array<String>) {
+fun main() { // Parameters to main method is no longer needed as of Kotlin 1.3
     tests(
         { Solution.test("hei") == oppgave1("hei") },
         { Solution.test("hei4") == oppgave2("hei") },
         { Solution.test("hei4") == oppgave3("hei") }
     )
-    println(classEqualFieldNames(Test("hei"), Test2("heia")))
+    println(classEqualFieldNamesAndTypes(Test("hei"), Test2("heia")))
 }
 
 data class Test(val a: String)
