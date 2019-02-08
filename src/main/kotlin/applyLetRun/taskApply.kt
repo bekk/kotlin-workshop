@@ -1,5 +1,6 @@
 package applyLetRun
 
+import utils.classEqualFieldNames
 import utils.tests
 
 
@@ -9,7 +10,11 @@ fun main(args: Array<String>) {
         { Solution.test("hei4") == oppgave2("hei") },
         { Solution.test("hei4") == oppgave3("hei") }
     )
+    println(classEqualFieldNames(Test("hei"), Test2("heia")))
 }
+
+data class Test(val a: String)
+data class Test2(val a: String)
 
 /**
  * Oppgavebeskrivelse ...
