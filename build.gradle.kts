@@ -13,8 +13,8 @@ repositories {
 }
 
 dependencies {
-    compile(kotlin("stdlib"))
-    testCompile("junit:junit:4.12")
+    implementation(kotlin("stdlib"))
+    implementation("junit:junit:4.12")
 }
 
 application {
@@ -30,7 +30,7 @@ tasks.withType<Jar> {
         attributes["Main-Class"] = application.mainClassName
     }
     from (
-        configurations.compile.get().map {
+        configurations.runtime.get().map {
             if (it.isDirectory) it else zipTree(it)
         }
     )

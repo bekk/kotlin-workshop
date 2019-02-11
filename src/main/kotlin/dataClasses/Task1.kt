@@ -1,6 +1,6 @@
 import dataClasses.Solution
 import dataClasses.Wine
-import utils.classEqualFieldNames
+import utils.classEqualFieldNamesAndTypes
 import utils.tests
 
 
@@ -13,7 +13,7 @@ fun main(args: Array<String>) {
     println(wine2)
     println(oppgave2)
     tests(
-        { classEqualFieldNames(wine1, oppgave1("test", 1, "test", 1)) },
+        { classEqualFieldNamesAndTypes(wine1, oppgave1("test", 1, "test", 1)) },
         { wine2.name == oppgave2.name && wine2.score == oppgave2.score }
     )
 }
