@@ -10,24 +10,21 @@ import org.junit.Assert.assertEquals
  *  Extension functions add functionality to existing classes, which are then available just like regular member
  *  methods. This is provided for many existing classes by the Kotlin standard library, where they contribute a
  *  substantial amount of new functionality, which previous would be supplied through libraries and static method calls.
+ *
+ *  For the curious; this is compiled down to static methods in the Java code, which is also how it's available in
+ *  Java source files.
  */
 
-class Extensions {
-    fun exampleStaticCalls() {
-        val a = ""
-        val v1 = "valid"
-        val v2: String? = "empty"
+fun main() {
+        val t1 = "valid"
+        val t2: String? = "empty"
         assertEquals("Example", true, "0123".containsAtleastAZero())
-        //assertEquals("Task 1", SimpleStringUtils.validate(v1), v1.task01())
-        //assertEquals("Task 2", SimpleStringUtils.isEmptyOrNull(v2), v2.task02())
-        //assertEquals("Task 3", 25, v2.squaredLength)
-        //assertEquals("Task 4", 20, "4" times 5)
-        //assertEquals("Task 5", 20, "4" times 5)
-        println(SimpleStringUtils.removeWhiteSpace(a))
-        println(SimpleStringUtils.validate(a))
+        assertEquals("Task 1", SimpleStringUtils.validate(t1), t1.task01())
+        assertEquals("Task 2", SimpleStringUtils.isEmptyOrNull(t2), t2.task02())
+        assertEquals("Task 3", 25, t1.task03)
+        assertEquals("Task 4", 20, "4" task04 5)
+        assertEquals("Task 5", 20, "4" * 5)
     }
-
-}
 
 /** An example extension function
  * Below is an example of an extension function, showcasing the syntax. In general, the signature is the following;
