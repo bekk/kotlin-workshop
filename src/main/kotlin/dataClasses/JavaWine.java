@@ -2,14 +2,14 @@ package dataClasses;
 
 import java.util.Objects;
 
-public class Wine {
+public class JavaWine {
 
     private String name;
     private int year;
     private String winery;
     private int score;
 
-    public Wine(String name, int year, String winery, int score) {
+    public JavaWine(String name, int year, String winery, int score) {
         this.name = name;
         this.year = year;
         this.winery = winery;
@@ -63,7 +63,7 @@ public class Wine {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
 
-        Wine that = (Wine) obj;
+        JavaWine that = (JavaWine) obj;
 
         if (score != that.score)
             return false;
@@ -78,7 +78,7 @@ public class Wine {
 
     @Override
     public String toString() {
-        return "Wine{" +
+        return "JavaWine{" +
                 "name='" + name + '\'' +
                 ", winery='" + winery + '\'' +
                 ", year='" + year + '\'' +
