@@ -1,11 +1,21 @@
 package functions
 
+import utils.classEqualFieldNamesAndTypes
+
 
 fun tests() {
 
+    val boxOne = SolutionBox(99);
+
+    val SolutionBox = Solution.createBoxUsingWidthLengthHeight(10, 10,15);
+    val Box = createBox()
+
     utils.tests(
         { Solution.capitalizeName("hei") == capitalizeName("hei") },
-        { Solution.capitalizeName("oLAV") == capitalizeName("oLAV") }
+        { Solution.capitalizeName("oLAV") == capitalizeName("oLAV") },
+        {SolutionBox.height == Box.height && SolutionBox.length == Box.lenght && SolutionBox.width == Box.width },
+
+        { classEqualFieldNamesAndTypes(boxOne, createBox()) }
     )
 }
 
@@ -39,7 +49,7 @@ fun capitalizeName(name: String): String = TODO()
  *
  */
 
-// TODO: implement createBox with three parameters (width,length and height). The width and length should have an default value of 10
+// TODO: implement createBox with three parameters (width,length and height). All parameters should have an default value of 10
 fun createBox(): Box = TODO()
 
 

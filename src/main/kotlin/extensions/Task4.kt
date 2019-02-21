@@ -7,8 +7,11 @@ package extensions
  *
  * Define an extension infix method on the String class called task04. It should convert itself to int(maybe the
  * stdlib has an extension function for this?) and return itself times the parameter.
+ *
+ * Syntax:
+ * infix <Extension function with one parameter>
  */
 
-fun Nothing.task4(): Nothing = TODO()
-
-infix fun String.task04(i: Int): Int = this.toInt() * i
+fun Nothing.task4(): Nothing {
+    return TODO()
+}
