@@ -7,7 +7,9 @@ package extensions
  *
  * Task: Expand task1, but account for nullability as well.
  *
- * To denote a null-object in Kotlin, the type is postfixed with a question mark(?).
+ * To denote a nullable object in Kotlin, a question mark(?) is appended to the type.
  */
 
-fun String?.task02(): Boolean = this != null && this.task01()
+fun Nothing.task02(): Nothing {
+    return TODO()
+}
