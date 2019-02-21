@@ -2,21 +2,9 @@ package functional
 
 import utils.tests
 
-data class Person(val name: String, val age: Int)
-
-val p1 = Person("Vetle", 24)
-val p2 = Person("Vegard", 50)
-val p3 = Person("Herman", 40)
-val p4 = Person("Thomas", 23)
-val p5 = Person("Yrjan", 27)
-val personList = listOf(p1, p2, p3, p4, p5)
+data class Person(val name: String, val age: Int, val friends: List<Person>?)
 
 fun main(args: Array<String>) {
-    tests(
-        { listOf("Vetle", "Vegard", "Herman", "Thomas", "Yrjan") == task01(personList) },
-        { listOf("Vegard", "Herman", "Yrjan") == task02(personList) },
-        { 164 == task03(personList) }
-    )
 }
 
 /**
