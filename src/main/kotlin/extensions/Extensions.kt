@@ -19,11 +19,11 @@ fun main() {
         val t1 = "valid"
         val t2: String? = "empty"
         assertEquals("Example", true, "0123".containsAtleastAZero())
-        assertEquals("Task 1", SimpleStringUtils.validate(t1), t1.task01())
-        assertEquals("Task 2", SimpleStringUtils.isEmptyOrNull(t2), t2.task02())
-        assertEquals("Task 3", 25, t1.task03)
-        assertEquals("Task 4", 20, "4" task04 5)
-        assertEquals("Task 5", 20, "4" * 5)
+//        assertEquals("Task 1", SimpleStringUtils.validate(t1), t1.task01())
+//        assertEquals("Task 2", SimpleStringUtils.isEmptyOrNull(t2), t2.task02())
+//        assertEquals("Task 3", 25, t1.task03)
+//        assertEquals("Task 4", 20, "4" task04 5)
+//        assertEquals("Task 5", 20, "4" * 5)
     }
 
 /** An example extension function
