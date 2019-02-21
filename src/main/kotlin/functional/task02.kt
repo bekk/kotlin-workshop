@@ -1,12 +1,7 @@
 package functional
 
-import utils.tests
-
 fun main(args: Array<String>) {
-    tests(
-        { listOf("Stian", "Thomas", "Håvard", "Vegard", "Herman", "Håkon", "Yrjan", "Vetle", "Petter", "Ole") == task01(company) }
-    )
-    println(task02(company))
+    test_task02()
 }
 
 /**

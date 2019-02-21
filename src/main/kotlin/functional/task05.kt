@@ -1,17 +1,12 @@
 package functional
 
-import utils.tests
-
 fun main(args: Array<String>) {
-    //tests(
-        //{  == task05(company) }
-    //)
-    println(task05(company))
+    test_task05()
 }
 
 /**
  * Make a function to return the oldest passenger
  */
-fun task05(company: TrainCompany) {
-    val oldest = company.trains.flatMap { it.passengers }.maxBy { it.age }
+fun task05(company: TrainCompany): Passenger? {
+    return null
 }

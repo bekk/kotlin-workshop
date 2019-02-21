@@ -1,11 +1,7 @@
 package functional
 
-import utils.tests
-
 fun main(args: Array<String>) {
-    tests(
-        { listOf(passenger(yrjan, 22, 2200), passenger(vetle, 15, 200), passenger(petter, 44, 1600), passenger(ole, 60, 1300)) == task03(company) }
-    )
+    test_task03()
 }
 
 /**
