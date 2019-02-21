@@ -1,11 +1,17 @@
 package functions
 
+import utils.classEqualFieldNamesAndTypes
+
 
 fun tests() {
 
+    val boxOne = SolutionBox(99);
+
     utils.tests(
         { Solution.capitalizeName("hei") == capitalizeName("hei") },
-        { Solution.capitalizeName("oLAV") == capitalizeName("oLAV") }
+        { Solution.capitalizeName("oLAV") == capitalizeName("oLAV") },
+
+        { classEqualFieldNamesAndTypes(boxOne, createBox()) }
     )
 }
 
