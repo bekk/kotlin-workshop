@@ -1,9 +1,11 @@
 package copy
 
-import org.junit.Assert
+import utils.tests
 
 fun main() {
-    Assert.assertEquals(UserCopy("Vegard", 30).copy(age = 31), task4())
+    tests(
+        { UserCopy("Vegard", 30).copy(age = 31) == task4() }
+    )
 }
 
 data class UserCopy(
@@ -23,4 +25,3 @@ data class UserCopy(
  * Lets write our own copy function!
  */
 fun task4() = UserCopy("Vegard", 30).customCopy()
-

@@ -1,10 +1,12 @@
 package applyLetRun
 
-import org.junit.Assert
+import utils.tests
 
 fun main() {
-    Assert.assertEquals("Bob", task1().name)
-    Assert.assertEquals(Solution.apply(), task1())
+    tests(
+        { "Bob" == task1().name },
+        { Solution.apply() == task1() }
+    )
 }
 
 data class User(var name: String = "Alice", val age: Int = 30)

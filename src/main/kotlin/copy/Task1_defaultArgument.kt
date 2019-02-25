@@ -1,11 +1,13 @@
 package copy
 
-import org.junit.Assert
+import utils.tests
 
 fun main() {
-    Assert.assertEquals(Solution.JavaUser().name, task1().name)
-    Assert.assertEquals(Solution.JavaUser().age, task1().age)
-    Assert.assertEquals(User("Vegard", 30), task1())
+    tests(
+        { Solution.JavaUser().name == task1().name },
+        { Solution.JavaUser().age == task1().age },
+        { User("Vegard", 30) == task1() }
+    )
 }
 
 /**

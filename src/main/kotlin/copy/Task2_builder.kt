@@ -1,14 +1,16 @@
 package copy
 
-import copy.Solution.JavaCar.*
-import org.junit.Assert
+import copy.Solution.JavaCar.Builder
+import utils.tests
 
 fun main() {
-    Assert.assertEquals(2019, task2().year)
-    Assert.assertEquals(2019, task3().year)
-    Assert.assertEquals(5, task3().seats)
-    Assert.assertEquals(Builder().withYear(2018).build().year, task2().year)
-    Assert.assertEquals(Builder().withYear(2018).withSeats(5).build().seats, task3().seats)
+    tests(
+        { 2019 == task2().year },
+        { 2019 == task3().year },
+        { 5 == task3().seats },
+        { Builder().withYear(2019).build().year == task2().year },
+        { Builder().withYear(2019).withSeats(5).build().seats == task3().seats }
+    )
 }
 
 data class Car(
