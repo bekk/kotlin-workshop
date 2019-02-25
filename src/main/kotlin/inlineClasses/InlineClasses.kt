@@ -5,6 +5,8 @@ import utils.tests
 fun main() {
 
     tests(
+        { Hours(1).toMinutes() == 60},
+        { Solution.toMinutes(1) == 60},
         { Name("Kotlin").greet() == "Hello, Kotlin" },
         { Name("Kotlin").length == 6 }
     )

@@ -5,12 +5,12 @@ package inlineClasses
  *
  * Description of inline classes...
  *
- * As the first task, create a simple inline class called Hours that takes an Int parameter.
+ * Create a simple inline class called Hours that takes an Int parameter.
+ * The class should have a function called toMinutes that multiplies the value passed to the class by 60.
+ * To run the test, uncomment the first test in InlineClasses.kt and run the main method.
  *
  */
 
-
-
 inline class Hours(val value: Int) {
-    fun toMinutes() = Minutes(value * 60)
+    fun toMinutes() = value * 60
 }
