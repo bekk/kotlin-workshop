@@ -3,21 +3,12 @@ package inlineClasses
 /**
  * Task 2 - Create an inline class, continued
  *
- * Create an inline class called Name that takes a String property.
- * Let the inline class have a property length, which gives the length of the string
- * that was passed to the class. Then make the class have a function called greet()
- * that returns a String like this: "Hello, $name"
- *
- * Remember that an inline class can't have 'blocking fields'. If you encounter this
- * problem, see the example inline class in InlineClass.kt
- *
+ * Now, let's make a tiny bit more complex inline class.
+ * This inline class should be named Hours, and just like the Minutes class we made in the previous task, Hours should
+ * take an Int parameter. The difference between Minutes and Hours is that the Hours class should have a function
+ * called to minutes, which returns a Minutes instance set to the value passed to Hours multiplied by 60.
  */
 
-inline class Name(val s: String) {
-    val length: Int
-        get() = s.length
-
-    fun greet(): String {
-        return "Hello, $s"
-    }
+inline class Hours(val value: Int) {
+    fun toMinutes() = Minutes(value * 60)
 }
