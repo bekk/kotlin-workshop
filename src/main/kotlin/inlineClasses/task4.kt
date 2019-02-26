@@ -1,5 +1,17 @@
 package inlineClasses
 
+import utils.tests
+
+fun main() {
+
+    tests(
+        { Days(4).value == 4 },
+        { Days(4).toHours() == Hours(4 * 24) },
+        { Days(4).toHours().toMinutes() == Minutes(4 * 24 * 60) },
+        { registration("New User") == Days(4).toHours().toMinutes() }
+    )
+}
+
 /**
  * Task 4 - The "real world" example
  *

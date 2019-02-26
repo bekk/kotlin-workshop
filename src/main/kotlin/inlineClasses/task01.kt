@@ -1,5 +1,14 @@
 package inlineClasses
 
+import utils.tests
+
+fun main() {
+
+    tests(
+        { Minutes(60).value == 60}
+    )
+}
+
 /**
  * Task 1 - Create an inline class
  *

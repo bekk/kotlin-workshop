@@ -1,5 +1,16 @@
 package inlineClasses
 
+import utils.tests
+
+fun main() {
+
+    tests(
+        { Name("Kotlin").value == "Kotlin" },
+        { Name("Kotlin").greet() == "Hello, Kotlin" },
+        { Name("Kotlin").length == 6 }
+    )
+}
+
 /**
  * Task 3 - Create an inline class, continued again
  *
@@ -13,11 +24,11 @@ package inlineClasses
  *
  */
 
-inline class Name(val s: String) {
+inline class Name(val value: String) {
     val length: Int
-        get() = s.length
+        get() = value.length
 
     fun greet(): String {
-        return "Hello, $s"
+        return "Hello, $value"
     }
 }

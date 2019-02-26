@@ -1,5 +1,15 @@
 package inlineClasses
 
+import utils.tests
+
+fun main() {
+
+    tests(
+        { Hours(1).value == 1 },
+        { Hours(1).toMinutes() == Minutes(60) }
+    )
+}
+
 /**
  * Task 2 - Create an inline class, continued
  *
