@@ -5,7 +5,7 @@ import utils.tests
 fun main() {
 
     tests("Minutes",
-        { Minutes(60).value == 60}
+        { task1() == 60}
     )
 }
 
@@ -13,13 +13,16 @@ fun main() {
  * Task 1 - Create an inline class
  *
  * Create a simple inline class called Minutes that takes an Int parameter (value).
- * To run the test, uncomment the test in task04.dataClasses.main() and then run it.
+ * In task1(), create an instance of minutes with value 60 and return the value.
  */
 
-inline class Minutes(val value: Int)
+//inline class Minutes(val value: Int)
 
-fun task() {
+class Minutes(val value: Int)
 
-    // uncomment to check it works
+fun task1(): Int {
+
+    //return Minutes(60).value
+    return 1
 
 }

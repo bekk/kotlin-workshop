@@ -5,9 +5,9 @@ import utils.tests
 fun main() {
 
     tests("Name",
-        { Name("Kotlin").value == "Kotlin" },
-        { Name("Kotlin").greet() == "Hello, Kotlin" },
-        { Name("Kotlin").length == 6 }
+        { task3Value("Kotlin") == "Kotlin" },
+        { task3Greet("kotlin") == "Hello, Kotlin" },
+        { task3Length("Kotlin") == 6 }
     )
 }
 
@@ -19,16 +19,34 @@ fun main() {
  * that was passed to the class. Then create a function inside the class called greet()
  * that returns a String like this: "Hello, $name"
  *
- * Remember that an inline class can't have 'blocking fields'. If you encounter this
- * problem, see the example inline class in InlineClass.kt
+ * Remember that an inline class can't have 'blocking fields'.
+ *
+ * In task3Value(), create an instance of Name and set value to name. Return the value.
+ * In task3Greet(), create an instance of Name and set value to name. Return the Name.greet() function.
+ * In task3Length(), create an instance of Name and set value to name. Return Name.length.
  *
  */
 
-inline class Name(val value: String) {
+/*inline class Name(val value: String) {
     val length: Int
         get() = value.length
 
     fun greet(): String {
         return "Hello, $value"
     }
+}*/
+
+class Name
+
+fun task3Value(name: String): String {
+    return ""
 }
+
+fun task3Greet(name: String): String {
+    return ""
+}
+
+fun task3Length(name: String): Int {
+    return 0
+}
+

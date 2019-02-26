@@ -5,13 +5,13 @@ import utils.tests
 fun main() {
 
     tests("Days",
-        { Days(4).value == 4 },
-        { Days(4).toHours() == Hours(4 * 24) },
-        { Days(4).toHours().toMinutes() == Minutes(4 * 24 * 60) }
+        { task4Value(4) == 4 },
+        { task4ToHours(4) == Hours(4 * 24) },
+        { task4ToMinutes(4) == Minutes(4 * 24 * 60) }
     )
 
     tests("Registration",
-        { registration("New User") == Days(4).toHours().toMinutes() }
+        { registration("New User", 4) == Minutes(4 * 24 * 60 )}
     )
 }
 
@@ -39,14 +39,32 @@ class MailScheduler {
 /**
  * MailScheduler.sendEmail() takes a String message and an Int delay. But what does delay mean? What unit does it take?
  * After some research, you figure out that the delay is meant to be in minutes.
- * Write a wrapper as an inline class (Days), that takes an Int parameter (value). Give the Days class a toHours() function.
- * Rewrite the sendMessage function in the MailScheduler to use the Minutes class you created in Task 1.
+ *
+ * - Write a wrapper as an inline class (Days), that takes an Int parameter (value).
+ * - Give the Days class a toHours() function that returns a instance of Minutes.
+ * - In task4Value(), create an instance of Days and set value to numberOfDays. Return value.
+ * - In task4ToHours(), create an instance of Days and set value to numberOfDays. Return Days.toHours().
+ * - In task4ToMinutes(), create an instance of Days and set value to numberOfDays. Return Hours.toMinutes().
+ * - Rewrite the sendMessage function in the MailScheduler to use the Minutes class you created in Task 1.
  */
 
-inline class Days(val value: Int) {
+/*inline class Days(val value: Int) {
     fun toHours() = Hours(value * 24)
+}*/
+
+class Days
+
+fun task4Value(numberOfDays: Int): Int {
+    return 0
 }
 
+fun task4ToHours(numberOfDays: Int): Hours {
+    return Hours(0)
+}
+
+fun task4ToMinutes(numberOfDays: Int): Minutes {
+    return Minutes(0)
+}
 
 /**
  * Finnaly, complete the registration function underneath by
@@ -58,7 +76,6 @@ inline class Days(val value: Int) {
     return MailScheduler().sendEmail(message, 4 * 24 * 60)
 }*/
 
-fun registration(newCustomer: String): Minutes {
-    val message = "Welcome, $newCustomer!"
-    return MailScheduler().sendEmail(message, Days(4).toHours().toMinutes())
+fun registration(newCustomer: String, delayInDays: Int): Minutes {
+   return Minutes(0)
 }

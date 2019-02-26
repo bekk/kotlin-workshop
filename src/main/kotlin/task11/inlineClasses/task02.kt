@@ -5,8 +5,8 @@ import utils.tests
 fun main() {
 
     tests("Hours",
-        { Hours(1).value == 1 },
-        { Hours(1).toMinutes() == Minutes(60) }
+        { task2Value() == 1 },
+        { task2ToMinutes() == Minutes(60) }
     )
 }
 
@@ -17,8 +17,22 @@ fun main() {
  * This inline class should be named Hours, and just like the Minutes class we made in the previous task, Hours should
  * take an Int parameter (value). The difference between Minutes and Hours is that the Hours class should have a function
  * called toMinutes, which returns a Minutes instance set to the value passed to Hours, multiplied by 60.
+ *
+ * In task2Value(), create an instance of Hours with value = 1. Return the value.
+ * In task2ToMinutes, create an instance of Hours with value = 1. Return Hours.toMinutes()
  */
 
+/*
 inline class Hours(val value: Int) {
     fun toMinutes() = Minutes(value * 60)
+}*/
+
+class Hours(val value: Int)
+
+fun task2Value(): Int {
+    return 0
+}
+
+fun task2ToMinutes(): Minutes {
+    return Minutes(1)
 }
