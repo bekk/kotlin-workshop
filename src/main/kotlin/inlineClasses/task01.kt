@@ -12,10 +12,8 @@ fun main() {
 /**
  * Task 1 - Create an inline class
  *
- * Description of inline classes...
- *
- * Create a simple inline class called Minutes that takes an Int parameter.
- * To run the test, uncomment the first test in InlineClasses.kt and run the main method.
+ * Create a simple inline class called Minutes that takes an Int parameter (value).
+ * To run the test, uncomment the test in main() and then run it.
  */
 
 inline class Minutes(val value: Int)

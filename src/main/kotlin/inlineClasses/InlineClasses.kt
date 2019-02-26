@@ -1,9 +1,9 @@
 package inlineClasses
 
  /**
-  * --------------------------------------
-  * Example of inline class with function
-  * --------------------------------------
+  * -----------------------------------------------
+  * Example of inline class with value and function
+  * -----------------------------------------------
   */
  inline class Balance(val money: Double) {
      val intValue: Int
