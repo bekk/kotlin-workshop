@@ -3,12 +3,14 @@ package functional
 import utils.tests
 
 fun main(args: Array<String>) {
-    test_task06()
+    tests("average spent",
+        { 1325.0 == task06(company) }
+    )
 }
 
 /**
  * Make a function to return the average money spent by the passengers travelling on the train going the farthest
  */
 fun task06(company: TrainCompany): Double {
-    return -1.0
+    return 0.0
 }

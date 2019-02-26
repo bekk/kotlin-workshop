@@ -1,7 +1,11 @@
 package functional
 
+import utils.tests
+
 fun main(args: Array<String>) {
-    test_task05()
+    tests("old passenger",
+        { passenger(vegard, 87, 8604) == task05(company) }
+    )
 }
 
 /**
