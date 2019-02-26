@@ -15,7 +15,7 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib"))
     implementation("junit:junit:4.12")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-task12.coroutines-core:1.0.1")
 }
 
 application {
