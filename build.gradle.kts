@@ -24,6 +24,7 @@ application {
 
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.freeCompilerArgs += listOf("-XXLanguage:+InlineClasses")
 }
 
 tasks.withType<Jar> {

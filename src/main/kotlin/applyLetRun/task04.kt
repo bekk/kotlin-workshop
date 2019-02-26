@@ -1,10 +1,12 @@
 package applyLetRun
 
-import org.junit.Assert
+import utils.tests
 
 fun main() {
-    Assert.assertEquals(24000, task4())
-    Assert.assertEquals(Solution.with(), task4())
+    tests("with",
+        { 24000 == task4() },
+        { Solution.with() == task4() }
+    )
 }
 
 data class Vector4(val x: Int = 10, val y: Int = 20, var z: Int = 30, val w: Int = 40)
