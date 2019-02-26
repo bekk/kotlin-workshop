@@ -5,7 +5,7 @@ package task10.extensions
  * you just cant get away from the null at times. While calling a method on a null object will throw an exception in
  * Java, handling of null can be delegated to the extension function.
  *
- * Task: Expand task1, but account for nullability as well.
+ * Task: Expand task04.dataClasses.task1, but account for nullability as well.
  *
  * To denote a nullable object in Kotlin, a question mark(?) is appended to the type.
  */

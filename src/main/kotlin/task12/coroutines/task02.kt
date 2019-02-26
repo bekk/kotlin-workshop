@@ -10,7 +10,7 @@ fun main() {
 /**
  * Kotlin runBlocking
  *
- * runBlocking - It is also possible to launch a coroutine which blocks the main thread.
+ * runBlocking - It is also possible to launch a coroutine which blocks the task04.dataClasses.main thread.
  * This is used when you have to wait for some result or other operations that you
  * want to do before continuing the program.
  */

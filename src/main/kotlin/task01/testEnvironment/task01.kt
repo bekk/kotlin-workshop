@@ -3,7 +3,7 @@ package task01.testEnvironment
 import utils.tests
 
 /**
- * Run the main method to check that everything is working correctly.
+ * Run the task04.dataClasses.main method to check that everything is working correctly.
  * No modifications should be necessary to get this running.
  *
  * Expected result:

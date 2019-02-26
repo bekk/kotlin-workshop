@@ -13,8 +13,8 @@ public class Solution {
     }
 
     public static void task3() {
-        JavaWine wine1 = new JavaWine("The Wine", 1992, "The Winery", 10);
-        JavaWine wine2 = new JavaWine("The Wine", 1992, "The Winery", 10);
+        JavaWine wine1 = new JavaWine("The task04.dataClasses.Wine", 1992, "The Winery", 10);
+        JavaWine wine2 = new JavaWine("The task04.dataClasses.Wine", 1992, "The Winery", 10);
 
         System.out.println(wine1.equals(wine2));
     }
@@ -24,7 +24,7 @@ public class Solution {
     }
 
     public static void task5() {
-        JavaWine wine = new JavaWine("The Wine", 1992, "The Winery", 10);
+        JavaWine wine = new JavaWine("The task04.dataClasses.Wine", 1992, "The Winery", 10);
         String name = wine.getName();
         int year = wine.getYear();
         String winery = wine.getWinery();
