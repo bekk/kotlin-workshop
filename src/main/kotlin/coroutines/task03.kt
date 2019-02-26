@@ -1,7 +1,7 @@
 package coroutines
 
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
 
 /**
  * Kotlin async
@@ -13,9 +13,32 @@ import kotlinx.coroutines.async
  */
 
 fun main() {
-    val firstRange = GlobalScope.async {
-        val sum = arrayOf(1..1000).map {
 
-        }
+    task03()
+
+}
+
+fun task03() = runBlocking {
+    val timeBeforeTests = System.currentTimeMillis()
+    val firstMathOp = runBlocking {
+        var result = 1
+        for (i in 1..15) { result *= i }
+        result
     }
+
+    val secondMathOp = runBlocking {
+        var result: Long = 1
+        for (i in 1..15) { result *= i }
+        result
+    }
+
+    // operationToDoBeforeResult()
+    // async is slower than runBlocking??
+    val result = firstMathOp + secondMathOp
+    val runTime = System.currentTimeMillis() - timeBeforeTests
+    println(runTime)
+}
+
+fun operationToDoBeforeResult() = runBlocking {
+    delay(1000)
 }
