@@ -12,6 +12,14 @@ fun main() {
 data class Vector(val x: Int = 10, val y: Int = 20)
 
 /**
+ *
+ * Another standard function is `let`, it gives us a reference
+ * to the object we are working on. So while `apply` lets us modify
+ * an object directly without changing the return type, `let` allows
+ * us to work with the object and return a new type.
+ *
+ * @see let
+ *
  * Use the kotlin `let` function to multiply the Vector x and y
  */
 fun task2(): Int = Vector(10, 20).let {
