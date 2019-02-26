@@ -3,7 +3,7 @@ package task04.dataClasses
 import utils.classEqualFieldNamesAndTypes
 import utils.tests
 
-fun main() {
+/*fun main() {
 
     tests("",
         { classEqualFieldNamesAndTypes(Solution.task1("The task04.dataClasses.Wine", 2019, "The Winery", 10),
@@ -15,6 +15,6 @@ fun main() {
     )
     task4()
     task5()
-}
+}*/
 
 

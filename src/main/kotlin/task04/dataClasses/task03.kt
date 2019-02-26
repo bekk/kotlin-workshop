@@ -19,15 +19,15 @@ fun main() {
  * Does IntelliJ suggest that you change one of the checks?
  */
 
-//val wine1 = task04.dataClasses.Wine("test", 1, "test", 1)
-//val wine2 = task04.dataClasses.Wine("test", 1, "test", 1)
+val wine1 = WhiteWine("test", 1, "test", 1)
+val wine2 = WhiteWine("test", 1, "test", 1)
 
 fun equals1(): Boolean {
-    return false
-    //return wine1.equals(wine2)
+    //return false
+    return wine1.equals(wine2)
 }
 
 fun equals2(): Boolean {
-    return false
-    //return wine1 == wine2
+    //return false
+    return wine1 == wine2
 }
