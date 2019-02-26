@@ -4,7 +4,7 @@ package strings
 
 fun tests() {
 
-    utils.tests(
+    utils.tests("",
         { Solution.formatFirstNameAndSurnam  ("Ola", "Nordmann") == formatFirstAndSurname("Ola", "Nordmann") }
     )
 }

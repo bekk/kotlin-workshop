@@ -4,7 +4,7 @@ import utils.tests
 
 fun main() {
 
-    tests(
+    tests("",
         // Task 1:
         { Minutes(60).value == 60},
         // Task 2:

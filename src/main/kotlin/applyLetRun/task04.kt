@@ -3,7 +3,7 @@ package applyLetRun
 import utils.tests
 
 fun main() {
-    tests(
+    tests("with",
         { 24000 == task4() },
         { Solution.with() == task4() }
     )

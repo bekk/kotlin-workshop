@@ -3,7 +3,7 @@ package copy
 import utils.tests
 
 fun main() {
-    tests(
+    tests("Copy",
         { UserCopy("Vegard", 30).copy(age = 31) == task4() }
     )
 }
