@@ -1,7 +1,13 @@
 package functional
 
+import utils.tests
+
 fun main(args: Array<String>) {
-    test_task01()
+    val routes = listOf("Oslo s - Oslo lufthavn", "Lillehammer - Lillestrøm", "Stavanger - Oslo s")
+
+    tests("get route names",
+        { routes == task01(company) }
+    )
 }
 
 /**

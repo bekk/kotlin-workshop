@@ -1,7 +1,13 @@
 package functional
 
+import utils.tests
+
 fun main(args: Array<String>) {
-    test_task02()
+    val names = listOf("Stian", "Thomas", "Håvard", "Vegard", "Herman", "Håkon", "Yrjan", "Vetle", "Petter", "Ole")
+
+    tests("get names",
+        { names == task02(company) }
+    )
 }
 
 /**
