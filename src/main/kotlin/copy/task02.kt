@@ -4,7 +4,7 @@ import copy.Solution.JavaCar.Builder
 import utils.tests
 
 fun main() {
-    tests(
+    tests("Named parameters",
         { 2019 == task2().year },
         { 2019 == task3().year },
         { 5 == task3().seats },

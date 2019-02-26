@@ -4,7 +4,7 @@ import utils.tests
 
 fun main() {
 
-    tests(
+    tests("Minutes",
         { Minutes(60).value == 60}
     )
 }
@@ -17,3 +17,9 @@ fun main() {
  */
 
 inline class Minutes(val value: Int)
+
+fun task() {
+
+    // uncomment to check it works
+
+}

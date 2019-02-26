@@ -4,7 +4,7 @@ import utils.tests
 
 fun main() {
 
-    tests(
+    tests("Name",
         { Name("Kotlin").value == "Kotlin" },
         { Name("Kotlin").greet() == "Hello, Kotlin" },
         { Name("Kotlin").length == 6 }

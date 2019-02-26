@@ -3,7 +3,7 @@ package applyLetRun
 import utils.tests
 
 fun main() {
-    tests(
+    tests("let",
         { 200 == task2() },
         { Solution.let() == task2() }
     )

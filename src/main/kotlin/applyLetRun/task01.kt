@@ -3,7 +3,7 @@ package applyLetRun
 import utils.tests
 
 fun main() {
-    tests(
+    tests("apply",
         { "Bob" == task1().name },
         { Solution.apply() == task1() }
     )

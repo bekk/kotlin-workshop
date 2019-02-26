@@ -3,7 +3,7 @@ package lambdas
 import utils.tests
 
 fun main() {
-    tests(
+    tests("",
         { "hello" == task1() },
         { 20 == task2() },
         { "olleH!" == task3() }

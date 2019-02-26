@@ -1,9 +1,11 @@
 package utils
 
 import java.lang.reflect.Field
-import java.lang.reflect.Method
 
-fun tests(vararg blocks: () -> (Boolean)) {
+
+fun tests(description: String, vararg blocks: () -> Boolean) {
+
+    val desc = if (description == "") "" else "$description:"
 
     blocks.forEachIndexed { index, block ->
         val testId = index + 1
@@ -11,15 +13,15 @@ fun tests(vararg blocks: () -> (Boolean)) {
         try {
             val success = block()
             if (success) {
-                println("Test $testId - Success!")
+                println("$desc Test $testId - Success!")
             }
             if (!success) {
-                println("Test $testId - Failed!")
+                println("$desc Test $testId - Failed!")
             }
         } catch (ex: NotImplementedError) {
-            println("Test $testId - Not implemented yet")
+            println("$desc Test $testId - Not implemented yet")
         } catch (ex: Exception) {
-            println("Test $testId - Error running test: $ex")
+            println("$desc Test $testId - Error running test: $ex")
         }
     }
 }

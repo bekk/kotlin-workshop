@@ -4,10 +4,13 @@ import utils.tests
 
 fun main() {
 
-    tests(
+    tests("Days",
         { Days(4).value == 4 },
         { Days(4).toHours() == Hours(4 * 24) },
-        { Days(4).toHours().toMinutes() == Minutes(4 * 24 * 60) },
+        { Days(4).toHours().toMinutes() == Minutes(4 * 24 * 60) }
+    )
+
+    tests("Registration",
         { registration("New User") == Days(4).toHours().toMinutes() }
     )
 }

@@ -4,7 +4,7 @@ import utils.tests
 
 fun main() {
 
-    tests(
+    tests("Hours",
         { Hours(1).value == 1 },
         { Hours(1).toMinutes() == Minutes(60) }
     )

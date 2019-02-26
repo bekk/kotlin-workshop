@@ -3,7 +3,7 @@ package copy
 import utils.tests
 
 fun main() {
-    tests(
+    tests("Default arguments",
         { Solution.JavaUser().name == task1().name },
         { Solution.JavaUser().age == task1().age },
         { User("Vegard", 30) == task1() }
@@ -11,7 +11,7 @@ fun main() {
 }
 
 /**
- * Set default values for the user object.
+ * TODO: Set default values for the user object.
  */
 data class User(val name: String, val age: Int)
 
