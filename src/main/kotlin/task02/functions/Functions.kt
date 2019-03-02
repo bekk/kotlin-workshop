@@ -5,7 +5,7 @@ import utils.classEqualFieldNamesAndTypes
 
 fun tests() {
 
-    val boxOne = SolutionBox(99);
+    val boxOne = SolutionBox(99)
 
     val SolutionBox = Solution.createBoxUsingWidthLengthHeight(10, 10,15)
     lateinit var Box: Box
