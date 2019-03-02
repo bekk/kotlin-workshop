@@ -7,10 +7,14 @@ fun tests() {
 
     val boxOne = SolutionBox(99);
 
-    val SolutionBox = Solution.createBoxUsingWidthLengthHeight(10, 10,15);
-    val Box = createBox()
+    val SolutionBox = Solution.createBoxUsingWidthLengthHeight(10, 10,15)
+    lateinit var Box: Box
 
     utils.tests("",
+        {
+            Box = createBox()
+            true
+        },
         { Solution.capitalizeName("hei") == capitalizeName("hei") },
         { Solution.capitalizeName("oLAV") == capitalizeName("oLAV") },
         {SolutionBox.height == Box.height && SolutionBox.length == Box.lenght && SolutionBox.width == Box.width },

@@ -5,7 +5,7 @@ import java.lang.reflect.Field
 
 fun tests(description: String, vararg blocks: () -> Boolean) {
 
-    val desc = if (description == "") "" else "$description:"
+    val desc = if (description.isEmpty()) "" else "$description:"
 
     blocks.forEachIndexed { index, block ->
         val testId = index + 1
@@ -20,6 +20,9 @@ fun tests(description: String, vararg blocks: () -> Boolean) {
             }
         } catch (ex: NotImplementedError) {
             println("$desc Test $testId - Not implemented yet")
+        } catch (ex: UninitializedPropertyAccessException) {
+            println("$desc Test $testId - A property used has not been initialized - " +
+                    "maybe an earlier test has to be fixed first?")
         } catch (ex: Exception) {
             println("$desc Test $testId - Error running test: $ex")
         }
