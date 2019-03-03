@@ -4,7 +4,7 @@ import utils.tests
 
 fun main() {
     tests("with",
-        { 24000 == task4() },
+        { 240000 == task4() },
         { Solution.with() == task4() }
     )
 }
