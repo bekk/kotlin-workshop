@@ -18,6 +18,5 @@ fun stringFormat(formatter: (String) -> String): (String) -> String = { str -> f
  * return the result.
  */
 fun task3(): String {
-    val myStringFormatter = stringFormat { "${it.reversed()}!" }
-    return myStringFormatter("Hello")
+    TODO()
 }
