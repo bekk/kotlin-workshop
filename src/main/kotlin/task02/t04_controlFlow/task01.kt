@@ -21,9 +21,6 @@ fun main(args: Array<String>) {
  *
  * The classical way of writing a max function in Java could be something like:
  *
- *
- *
- *
  * TODO: write the body of the max function.
  */
 

@@ -12,4 +12,8 @@ class SimpleStringUtils {
     public static boolean isEmptyOrNull(String input) {
         return input == null || input.length() == 0;
     }
+
+    public static int multiplyStringAndInt(String input, int multiplyWith) {
+        return Integer.parseInt(input) * multiplyWith;
+    }
 }
