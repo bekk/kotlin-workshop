@@ -1,16 +1,12 @@
 package task02.functions
 
 
-fun tests() {
+fun main() {
 
     val box = createBoxWrapper(15)
     utils.tests("",
         { box.height == 15 && box.lenght == 10 && box.width == 10 }
     )
-}
-
-fun main(args: Array<String>) {
-    tests()
 }
 
 
