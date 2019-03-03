@@ -13,7 +13,7 @@ fun main() {
 /**
  * Task 3:
  *
- * In Kotlin Function parameters can be named when calling task02.functions.
+ * In Kotlin Function parameters can be named when calling functions.
  * This is very convenient when a function has a high number of parameters or default ones.
  *
  */

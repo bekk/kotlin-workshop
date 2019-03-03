@@ -22,7 +22,7 @@ data class Car(
 
 
 /**
- * Kotlin also support named parameters for constructors and task02.functions.
+ * Kotlin also support named parameters for constructors and functions.
  *
  * So instead of creating a builder for our objects we can overwrite the default arguments we want by naming them.
  * Change the 'year' to 2019
