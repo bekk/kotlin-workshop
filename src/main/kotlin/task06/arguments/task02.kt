@@ -27,9 +27,9 @@ data class Car(
  * So instead of creating a builder for our objects we can overwrite the default arguments we want by naming them.
  * Change the 'year' to 2019
  */
-fun task2() = Car(year = 2019)
+fun task2(): Car = TODO()
 
 /**
  * Change both the 'year' to 2019, and the numbers of 'seats' to 5
  */
-fun task3() = Car(year = 2019, seats = 5)
+fun task3(): Car = TODO()
