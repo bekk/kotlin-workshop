@@ -1,7 +1,6 @@
 package task02.strings
 
 
-
 fun tests() {
 
     utils.tests("",
