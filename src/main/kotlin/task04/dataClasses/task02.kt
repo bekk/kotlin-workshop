@@ -29,12 +29,13 @@ fun main() {
  * The function task2 takes a WhiteWine object as a parameter. In the function, change the object so that
  * the name is changed to have 'wine' at the end of the original name, and the score to +1 of the original score.
  * Then, return the newly created object.
- * When your done, uncomment the second test in DataClasses.tk.
+ * When your done, run main()
+ *
  * Hint: copy()
  */
 
 data class WhiteWine(val name: String, val year: Int, val winery: String, val score: Int)
 
 fun task2(wine: WhiteWine): WhiteWine {
-    return wine.copy( name = wine.name + "wine", score = wine.score + 1) //return wine
+    return wine
 }

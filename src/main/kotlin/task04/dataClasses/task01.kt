@@ -19,17 +19,15 @@ fun main() {
  * In addition, it has its own methods for equals() and toString().
  * As the first task, declare a Kotlin data class (task04.dataClasses.Wine) that does the same as the Java class JavaWine.
  */
-data class RedWine(val name: String, val year: Int, val winery: String, val score: Int)
 
-//class RedWine
+class RedWine
 
 /**
  * To test that your newly created data class is "equal" to JavaWine, make the task04.dataClasses.task1 function take in the
  * four fields of the class as parameters and return an instance of the task04.dataClasses.Wine class.
- * Uncomment the first test in DataClasses.kt to run the test.
+ * Run main() to test.
  */
 
 fun task1(name: String, year: Int, winery: String, score: Int): RedWine {
-    return RedWine(name, year, winery, score)
-    //return RedWine()
+    return RedWine()
 }
