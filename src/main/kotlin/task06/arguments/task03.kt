@@ -19,9 +19,9 @@ data class UserCopy(
 }
 
 /**
- * Kotlin data classes comes with a handy function, task05.arguments, which allows us to edit values of immutable objects
+ * Kotlin data classes comes with a handy function, copy, which allows us to edit values of immutable objects
  * by copying them to a new object by overwriting default arguments.
  *
- * Lets write our own task05.arguments function!
+ * Lets write our own copy function!
  */
 fun task4() = UserCopy("Vegard", 30).customCopy()
