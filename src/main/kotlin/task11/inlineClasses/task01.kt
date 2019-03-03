@@ -16,13 +16,8 @@ fun main() {
  * In task1(), create an instance of minutes with value 60 and return the value.
  */
 
-//inline class Minutes(val value: Int)
-
 class Minutes(val value: Int)
 
 fun task1(): Int {
-
-    //return Minutes(60).value
-    return 1
-
+    TODO()
 }

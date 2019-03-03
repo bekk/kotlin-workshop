@@ -5,7 +5,7 @@ fun main(args: Array<String>) {
 }
 
 /**
- * Kotlin is so nice that you don't have to use explicit cast operators like you do in java.
+ * Kotlin is so nice that you don't have to use explicit cast operators like you do in Java.
  * Objects that are type checked are automatically cast to the type it is checked against
  *
  * See example -->

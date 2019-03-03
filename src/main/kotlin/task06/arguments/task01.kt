@@ -17,7 +17,7 @@ data class User(val name: String, val age: Int)
 
 
 /**
- * Kotlin allows use to define default arguments.
+ * Kotlin allows us to define default arguments.
  * The syntax for default argument is 'val variable: Type = defaultValue'
  *
  * Try to add default arguments to the data class so we don't have to supply the name and age.

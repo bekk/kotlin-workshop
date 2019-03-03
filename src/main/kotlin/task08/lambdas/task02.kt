@@ -4,8 +4,7 @@ import utils.tests
 
 fun main() {
     tests("lambda with argument",
-        { 20 == task2() },
-        { "olleH!" == task3() }
+        { 20 == task2() }
     )
 }
 

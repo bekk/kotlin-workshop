@@ -27,26 +27,17 @@ fun main() {
  *
  */
 
-/*inline class Name(val value: String) {
-    val length: Int
-        get() = value.length
-
-    fun greet(): String {
-        return "Hello, $value"
-    }
-}*/
-
 class Name
 
 fun task3Value(name: String): String {
-    return ""
+    TODO()
 }
 
 fun task3Greet(name: String): String {
-    return ""
+    TODO()
 }
 
 fun task3Length(name: String): Int {
-    return 0
+    TODO()
 }
 

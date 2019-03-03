@@ -22,17 +22,12 @@ fun main() {
  * In task2ToMinutes, create an instance of Hours with value = 1. Return Hours.toMinutes()
  */
 
-/*
-inline class Hours(val value: Int) {
-    fun toMinutes() = Minutes(value * 60)
-}*/
-
 class Hours(val value: Int)
 
 fun task2Value(): Int {
-    return 0
+    TODO()
 }
 
 fun task2ToMinutes(): Minutes {
-    return Minutes(1)
+    TODO()
 }
