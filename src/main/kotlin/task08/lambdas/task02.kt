@@ -18,4 +18,4 @@ fun numberMagic(lambda: (Int) -> Int) = lambda(10)
  *
  * Lets pass a lambda to 'numberMagic' that doubles the number received.
  */
-fun task2() = numberMagic { it * 2 }
+fun task2(): Int = TODO()
