@@ -1,7 +1,13 @@
 package task07.smartCast
 
+import utils.tests
+
 fun main(args: Array<String>) {
-    task02()
+    tests("when",
+        { task01("hello") == "HELLO" },
+        { task01(42) == "42" },
+        { task01(42L) == "dunno" }
+        )
 }
 
 /**
@@ -19,35 +25,12 @@ fun main(args: Array<String>) {
  * Kotlin compiler automatically casts word to type String which has the property [String.length].
  *
  *
- * task02 - Use 'when' in accumulate to make a function
+ * Use kotlin `when` to return name of the type.
+ *   - For a string it should return the uppercase version of the string
+ *   - For an int it should return the int as a string
+ *   - For anything else "dunno"
  */
 
-fun task01() {
 
-}
+fun task01(anything: Any): String = TODO()
 
-fun task02(): Int {
-    val listOfStringAndIntNumbers = listOf("two", 1, "eight", 9, "three", "six", 4)
-    // TODO: Insert code ->
-    return -1
-}
-
-fun stringNumberToIntNumber(stringNumber: String): Int {
-    return when(stringNumber) {
-        "one" -> 1
-        "two" -> 2
-        "three" -> 3
-        "four" -> 4
-        "five" -> 5
-        "six" -> 6
-        "seven" -> 7
-        "eight" -> 8
-        "nine" -> 9
-        else -> -1
-    }
-}
-
-fun accumulate(anyObject: Any): Int {
-    // TODO: Insert code ->
-    return -1
-}
