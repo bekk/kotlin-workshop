@@ -1,16 +1,11 @@
 package task02.controlFlow
 
 
-fun testsWhen() {
-    utils.tests("",
-        { false == isEven(1) },
-        { true == isEven(200) }
-
-    )
-}
-
 fun main(args: Array<String>) {
-    testsWhen()
+    utils.tests("when expression",
+        { !isEven(1) },
+        { isEven(200) }
+    )
 }
 
 

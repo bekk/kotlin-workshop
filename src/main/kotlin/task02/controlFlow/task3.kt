@@ -1,11 +1,13 @@
 package task02.controlFlow
 
+import utils.tests
 
 
 fun main(args: Array<String>) {
-    // TODO: Uncomment these when you have implemented the methods
-    //printOneToHundred()
-    //printListOfStringsInUpperCase()
+    tests("printing",
+        { printOneToHundred() is Unit },
+        { printListOfStringsInUpperCase() is Unit }
+    )
 }
 
 
@@ -43,8 +45,8 @@ fun main(args: Array<String>) {
 /**
  * Task 1: Print all numbers from 1 to 100;
  */
-fun printOneToHundred(){
-    // TODO
+fun printOneToHundred() {
+    TODO()
 }
 
 
@@ -56,7 +58,7 @@ val words = listOf("pen", "cup", "dog", "spectacles")
 
 
 fun printListOfStringsInUpperCase() {
-   //TODO
+    TODO()
 }
 
 
