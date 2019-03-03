@@ -1,4 +1,4 @@
-package task02.nullability
+package task02.t03_nullability
 
 class House(arg: String?) {
     var owner: Person? = Person(arg)

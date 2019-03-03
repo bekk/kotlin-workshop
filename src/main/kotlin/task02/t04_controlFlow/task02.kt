@@ -1,4 +1,4 @@
-package task02.controlFlow
+package task02.t04_controlFlow
 
 
 fun main(args: Array<String>) {
