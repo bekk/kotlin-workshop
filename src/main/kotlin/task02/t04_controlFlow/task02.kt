@@ -10,11 +10,9 @@ fun main(args: Array<String>) {
 
 
 /**
- * Task 2:
+ * Task 2: When
  *
- * When:
- *
- * When is Kotlins replacement of the switch-statement. But When lets us do more than switch in Java.
+ * When is Kotlins replacement of the switch-statement, but When lets us do more than switch in Java.
  * https://kotlinlang.org/docs/reference/control-flow.html
  *
  * In its simplest form a when statement could look like this:
@@ -27,7 +25,7 @@ fun main(args: Array<String>) {
         }
     }
  *
- * TODO: Instead of checking for 1 and 2 use when to check if x is even or odd .
+ * TODO: Instead of checking for 1 and 2, like in the example, use when to check if x is even or odd.
  */
 
 fun isEven(x: Int): Boolean = TODO()

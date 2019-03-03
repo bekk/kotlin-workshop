@@ -38,12 +38,10 @@ fun main(args: Array<String>) {
  * val oneToTen = 1..10
  * gives us 1,2,3,4,5,6,7,8,9,10
  *
- *
- * TODO: Instead of checking for 1 and 2 use when to check if x is even or odd .
  */
 
 /**
- * Task 1: Print all numbers from 1 to 100;
+ * Task 1: Print all numbers from 1 to 100.
  */
 fun printOneToHundred() {
     TODO()
@@ -51,7 +49,7 @@ fun printOneToHundred() {
 
 
 /**
- * Task 2: For each word print the word in upper case:
+ * Task 2: For each word print the word in upper case.
  */
 
 val words = listOf("pen", "cup", "dog", "spectacles")
