@@ -1,18 +1,12 @@
 package task02.controlFlow
 
 
-fun tests() {
 
-
-
-    utils.tests("",
+fun main(args: Array<String>) {
+    utils.tests("max",
         { 2 == max(1,2) }
 
     )
-}
-
-fun main(args: Array<String>) {
-    tests()
 }
 
 
