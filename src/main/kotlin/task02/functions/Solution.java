@@ -3,7 +3,7 @@ package task02.functions;
 public class Solution {
 
     public static String capitalizeName(String name){
-        return name.substring(0,1).toUpperCase();
+        return name.substring(0,1).toUpperCase() + name.substring(1);
     }
 
 

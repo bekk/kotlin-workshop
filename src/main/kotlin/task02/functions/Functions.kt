@@ -7,19 +7,17 @@ fun tests() {
 
     val boxOne = SolutionBox(99)
 
-    val SolutionBox = Solution.createBoxUsingWidthLengthHeight(10, 10,15)
+    val SolutionBox = Solution.createBoxUsingWidthLengthHeight(10, 10,10)
     lateinit var Box: Box
 
     utils.tests("",
+        { Solution.capitalizeName("hei") == capitalizeName("hei") },
+        { Solution.capitalizeName("oLAV") == capitalizeName("oLAV") },
         {
             Box = createBox()
             true
         },
-        { Solution.capitalizeName("hei") == capitalizeName("hei") },
-        { Solution.capitalizeName("oLAV") == capitalizeName("oLAV") },
-        {SolutionBox.height == Box.height && SolutionBox.length == Box.lenght && SolutionBox.width == Box.width },
-
-        { classEqualFieldNamesAndTypes(boxOne, createBox()) }
+        {SolutionBox.height == Box.height && SolutionBox.length == Box.lenght && SolutionBox.width == Box.width }
     )
 }
 
