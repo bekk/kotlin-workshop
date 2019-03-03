@@ -1,15 +1,11 @@
 package task02.strings
 
 
-fun tests() {
+fun main() {
 
     utils.tests("",
         { Solution.formatFirstNameAndSurnam  ("Ola", "Nordmann") == formatFirstAndSurname("Ola", "Nordmann") }
     )
-}
-
-fun main(args: Array<String>) {
-    tests()
 }
 
 
