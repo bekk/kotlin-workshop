@@ -1,4 +1,4 @@
-package task02.functions;
+package task02.t02_functions;
 
 public class Solution {
 

@@ -24,4 +24,6 @@ data class UserCopy(
  *
  * Lets write our own copy function!
  */
-fun task4() = UserCopy("Vegard", 30).customCopy()
+fun task4() = UserCopy("Vegard", 30).customCopy(
+    // overwrite age to age = 31
+)

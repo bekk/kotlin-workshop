@@ -21,6 +21,4 @@ data class Vector4(val x: Int = 10, val y: Int = 20, var z: Int = 30, val w: Int
  *
  * Use the kotlin `with` function to multiply the Vector4 x, y and z, w
  */
-fun task4(): Int = with(Vector4()) {
-    x * y * z * w
-}
+fun task4(): Int = TODO()

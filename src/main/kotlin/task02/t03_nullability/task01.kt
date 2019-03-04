@@ -1,4 +1,4 @@
-package task02.nullability
+package task02.t03_nullability
 
 fun main() {
     val houseWithOwner = House("Ola")

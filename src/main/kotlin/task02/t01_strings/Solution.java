@@ -1,4 +1,4 @@
-package task02.strings;
+package task02.t01_strings;
 
 public class Solution {
     public static String formatFirstNameAndSurnam(String firstName, String surname){

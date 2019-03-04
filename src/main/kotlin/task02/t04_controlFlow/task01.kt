@@ -1,4 +1,4 @@
-package task02.controlFlow
+package task02.t04_controlFlow
 
 
 
@@ -10,19 +10,13 @@ fun main(args: Array<String>) {
 }
 
 
-/**
- * Task 1:
+/** Task 1: If expressions
  *
- * If Expressions:
- *
- * The major difference between If statements in Java and Kotlin
+ * The major difference between if statements in Java and Kotlin
  * is that in Kotlin "if" is an expression. This also means that Kotlin does not have the
  * ternary operator.
  *
  * The classical way of writing a max function in Java could be something like:
- *
- *
- *
  *
  * TODO: write the body of the max function.
  */

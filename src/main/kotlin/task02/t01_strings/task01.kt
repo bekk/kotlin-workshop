@@ -1,10 +1,11 @@
-package task02.strings
+package task02.t01_strings
 
 
 fun main() {
 
     utils.tests("",
-        { Solution.formatFirstNameAndSurnam  ("Ola", "Nordmann") == formatFirstAndSurname("Ola", "Nordmann") }
+        { "Ola Nordmann" == formatFirstAndSurname("Ola", "Nordmann") },
+        { Solution.formatFirstNameAndSurnam("Ola", "Nordmann") == formatFirstAndSurname("Ola", "Nordmann") }
     )
 }
 

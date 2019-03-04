@@ -1,4 +1,4 @@
-package task02.nullability;
+package task02.t03_nullability;
 
 public class Solution {
     public static boolean checkIfOwnerIsNamed(House house, String ownerName) {
