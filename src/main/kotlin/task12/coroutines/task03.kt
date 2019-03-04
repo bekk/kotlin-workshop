@@ -1,44 +1,43 @@
 package task12.coroutines
 
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.runBlocking
+
+import kotlinx.coroutines.*
+import utils.tests
 
 /**
  * Kotlin async
  *
- * async - Kotlin task12.coroutines provides async if you want to do some processing while
+ * async - Kotlin coroutines provides async if you want to do some processing while
  * you wait for the result to finish. For example if you want to update UI while
  * getting some data or if you want to combine some data from an API.
+ *
+ * - Use 'async' to calculate and combine the sum of facultyOfTen + facultyOfTen
+ * - You can use .await() to await result of the mathematical operations when combining them
  *
  */
 
 fun main() {
-
     task03()
-
+    tests("coroutines - async", {
+        task03() == 7257600
+    })
 }
 
-fun task03() = runBlocking {
-    val timeBeforeTests = System.currentTimeMillis()
-    val firstMathOp = runBlocking {
-        var result = 1
-        for (i in 1..15) { result *= i }
-        result
-    }
+fun task03(): Int = runBlocking {
 
-    val secondMathOp = runBlocking {
-        var result: Long = 1
-        for (i in 1..15) { result *= i }
-        result
-    }
+    val firstResult = TODO("call faculty of ten async")
+    val secondResult = TODO("call faculty of ten async")
 
-    // operationToDoBeforeResult()
-    // async is slower than runBlocking??
-    val result = firstMathOp + secondMathOp
-    val runTime = System.currentTimeMillis() - timeBeforeTests
-    println(runTime)
+    updateUI()
+
+    val sumOfMath = TODO("Sum both results")
+    sumOfMath
 }
 
-fun operationToDoBeforeResult() = runBlocking {
-    delay(1000)
+fun updateUI() = GlobalScope.launch { delay(1000L) }
+
+fun facultyOfTen(): Int {
+    var result = 1
+    for (i in 1..10) { result *= i }
+    return result
 }
