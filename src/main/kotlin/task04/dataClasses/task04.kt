@@ -11,7 +11,7 @@ fun main() {
  * in the primary constructor of the data class. For the WhiteWine data class, Kotlin generates four componentN()
  * functions - component1(), component2(), component3() and component4() corresponding to the id and name properties.
  * Create a new data class with however many properties you want.
- * In task4(), create an instance of that data class and print out componentnN().
+ * In task4(), create an instance of that data class and print out componentN().
  * Run task4() from main().
  */
 
