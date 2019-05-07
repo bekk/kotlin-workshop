@@ -2,9 +2,7 @@ package task02.t02_functions
 
 
 fun main() {
-
-    val boxOne = SolutionBox(99)
-
+    
     val SolutionBox = Solution.createBoxUsingWidthLengthHeight(10, 10,10)
     lateinit var Box: Box
 
