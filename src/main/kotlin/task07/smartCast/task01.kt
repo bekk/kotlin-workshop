@@ -25,7 +25,7 @@ fun main(args: Array<String>) {
  * Kotlin compiler automatically casts word to type String which has the property [String.length].
  *
  *
- * Use kotlin `when` to return name of the type.
+ * Use Kotlin `when` to return name of the type.
  *   - For a string it should return the uppercase version of the string
  *   - For an int it should return the int as a string
  *   - For anything else "dunno"
