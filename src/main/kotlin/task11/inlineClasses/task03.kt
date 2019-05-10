@@ -6,7 +6,7 @@ fun main() {
 
     tests("Name",
         { task3Value("Kotlin") == "Kotlin" },
-        { task3Greet("kotlin") == "Hello, Kotlin" },
+        { task3Greet("Kotlin") == "Hello, Kotlin" },
         { task3Length("Kotlin") == 6 }
     )
 }
