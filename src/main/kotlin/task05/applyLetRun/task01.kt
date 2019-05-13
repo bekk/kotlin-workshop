@@ -22,7 +22,7 @@ data class User(var name: String = "Alice", val age: Int = 30)
  *
  * @see apply
  *
- * Use the kotlin `apply` function to change the name of the user to "Bob"
+ * Use the Kotlin `apply` function to change the name of the user to "Bob"
  */
 fun task1(): User = TODO()
 

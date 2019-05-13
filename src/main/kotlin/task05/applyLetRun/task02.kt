@@ -20,7 +20,7 @@ data class Vector(val x: Int = 10, val y: Int = 20)
  *
  * @see let
  *
- * Use the kotlin `let` function to multiply the Vector x and y
+ * Use the Kotlin `let` function to multiply the Vector x and y
  */
 fun task2(): Int = TODO()
 
