@@ -1,0 +1,11 @@
+Lag en webservice med Ktor.
+
+Ktor er et web-rammeverk for Kotlin. Se dokumentasjon på: https://ktor.io/
+
+
+Forslag til webservice:
+
+ - Lag et kommentar-felt API (tips: gjør det enkelt å bruk et hashmap/liste for lagring)
+ - Lag en pokedex ved bruk av pokeapi (https://pokeapi.co/)
+ - Lag en tjeneste som viser når neste buss går (entur: https://developer.entur.org/)
+ - Lag en tjeneste som henter ut været for Oslo (yr har et API: https://api.met.no/)
