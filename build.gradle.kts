@@ -12,6 +12,8 @@ repositories {
     mavenCentral()
 }
 
+sourceSets["main"].java.srcDir("src/main/kotlin")
+
 dependencies {
     implementation(kotlin("stdlib"))
     implementation("junit:junit:4.12")
