@@ -1,4 +1,4 @@
-package task11.inlineClasses
+package task12.inlineClasses
 
 import utils.tests
 
@@ -11,7 +11,11 @@ fun main() {
     )
 
     tests("Registration",
-        { registration("New User", 4) == Minutes(4 * 24 * 60 )}
+        { registration(
+            "New User",
+            4
+        ) == Minutes(4 * 24 * 60)
+        }
     )
 }
 

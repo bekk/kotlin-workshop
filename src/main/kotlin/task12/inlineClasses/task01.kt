@@ -1,4 +1,4 @@
-package task11.inlineClasses
+package task12.inlineClasses
 
 import utils.tests
 

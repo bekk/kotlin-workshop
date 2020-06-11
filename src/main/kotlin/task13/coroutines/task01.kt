@@ -1,4 +1,4 @@
-package task12.coroutines
+package task13.coroutines
 
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
