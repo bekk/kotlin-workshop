@@ -3,6 +3,7 @@ package task11.ktor
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
 import org.intellij.lang.annotations.Language
+import java.sql.Connection
 import java.sql.ResultSet
 import javax.sql.DataSource
 
@@ -22,10 +23,29 @@ fun prepopulateDatabase(dataSource: DataSource) {
     INSERT INTO ingredient VALUES ('e871a63e-5fa1-42fb-8cdd-aa49ddbf0656', '9b59090e-9968-4e43-9675-859f6cc64fda', 'Lime juice');
     INSERT INTO ingredient VALUES ('9bde8bdd-c473-4f76-9499-0bede908ce05', '9b59090e-9968-4e43-9675-859f6cc64fda', 'Salt');
     """
-
-    dataSource.connection.prepareStatement(sqlsetup).execute()
+    dataSource
+        .transaction {
+            prepareStatement(sqlsetup).execute()
+        }
 }
 
+fun <T> DataSource.transaction(block: Connection.() -> T): T {
+    var connection: Connection? = null
+    try {
+        connection = this.connection
+        connection.autoCommit = false
+
+        val result = connection.run(block)
+        connection.commit()
+
+        return result
+    } catch (exception: Exception) {
+        connection?.rollback()
+        throw exception
+    } finally {
+        connection?.close()
+    }
+}
 
 fun <T> ResultSet.map(block: ResultSet.() -> T): List<T> {
     val list = mutableListOf<T>()

@@ -12,16 +12,17 @@ data class IngredientDTO(val id: UUID, val name: String)
 class CocktailDAO(val dataSource: DataSource) {
     fun getCocktails(): List<CocktailDTO> {
         return dataSource
-            .connection
-            .prepareStatement("SELECT * from cocktail")
-            .executeQuery()
-            .map {
-                val id = UUID.fromString(getString("id"))
-                CocktailDTO(
-                    id = id,
-                    name = getString("name"),
-                    ingredients = getIngredients(id)
-                )
+            .transaction {
+                prepareStatement("SELECT * from cocktail")
+                    .executeQuery()
+                    .map {
+                        val id = UUID.fromString(getString("id"))
+                        CocktailDTO(
+                            id = id,
+                            name = getString("name"),
+                            ingredients = getIngredients(id)
+                        )
+                    }
             }
     }
 
@@ -33,17 +34,19 @@ class CocktailDAO(val dataSource: DataSource) {
 
     fun getIngredients(cocktailId: UUID): List<IngredientDTO> {
         return dataSource
-            .connection
-            .prepareStatement("SELECT * FROM ingredient WHERE cocktail_id = ?")
-            .apply {
-                setString(1, cocktailId.toString())
-            }
-            .executeQuery()
-            .map {
-                IngredientDTO(
-                    id = UUID.fromString(getString("id")),
-                    name = getString("name")
-                )
+            .transaction {
+                prepareStatement("SELECT * FROM ingredient WHERE cocktail_id = ?")
+                .apply {
+                    setString(1, cocktailId.toString())
+                }
+                .executeQuery()
+                .map {
+                    IngredientDTO(
+                        id = UUID.fromString(getString("id")),
+                        name = getString("name")
+                    )
+                }
+
             }
     }
 
