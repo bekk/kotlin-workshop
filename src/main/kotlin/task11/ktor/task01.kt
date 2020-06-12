@@ -10,6 +10,9 @@ import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 
 fun main() {
+    prepopulateDatabase(dataSource)
+    println(CocktailDAO(dataSource).getCocktails())
+
     embeddedServer(Netty, 8089) {
         routing {
             route("/test") {
