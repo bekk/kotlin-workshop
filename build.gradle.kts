@@ -22,8 +22,11 @@ dependencies {
     implementation("junit:junit:4.12")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3")
     implementation("io.ktor:ktor-server-netty:$ktorVersion")
+    implementation("io.ktor:ktor-client-apache:$ktorVersion")
+    implementation("io.ktor:ktor-client-jackson:$ktorVersion")
     implementation("com.h2database:h2:1.4.200")
     implementation("com.zaxxer:HikariCP:3.2.0")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.9.7")
 }
 
 application {
