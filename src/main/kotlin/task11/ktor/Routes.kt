@@ -5,7 +5,9 @@ import io.ktor.response.respondText
 import io.ktor.routing.*
 
 
-fun Route.cocktails() {
+fun Route.cocktails(
+    dao: CocktailDAO
+) {
     route("/cocktails") {
         get {
             call.respondText { "GET \"/cocktails\"" }
@@ -22,16 +24,17 @@ fun Route.cocktails() {
         }
 
         // Routes to handle cocktails parameter
-        cocktail()
+        cocktail(dao)
     }
 }
 
-fun Route.cocktail() {
+fun Route.cocktail(
+    dao: CocktailDAO
+) {
     route("/{cocktailId}") {
         get {
             call.respondText { "GET \"/cocktails/${call.parameters["cocktailId"]}\"" }
             // TODO: Get and return cocktail
-            // call.respond(dao.getCocktails().ifEmpty { HttpStatusCode.NotFound })
             // call.respond(dao.getCocktail(UUID.fromString(call.parameters["cocktailId"])) ?: HttpStatusCode.NotFound)
         }
 
@@ -44,11 +47,13 @@ fun Route.cocktail() {
         }
 
         // Routes to handle cocktail ingredients
-        ingredients()
+        ingredients(dao)
     }
 }
 
-fun Route.ingredients() {
+fun Route.ingredients(
+    dao: CocktailDAO
+) {
     route("/ingredients") {
         get {
             call.respondText { "GET \"/cocktails/${call.parameters["cocktailId"]}/ingredients\"" }
@@ -65,11 +70,13 @@ fun Route.ingredients() {
         }
 
         // Routes to handle ingredients parameter
-        ingredient()
+        ingredient(dao)
     }
 }
 
-fun Route.ingredient() {
+fun Route.ingredient(
+    dao: CocktailDAO
+) {
     route("/{ingredientId}") {
         get {
             call.respondText { "GET \"/cocktails/${call.parameters["cocktailId"]}/ingredients/${call.parameters["ingredientId"]}\"" }
