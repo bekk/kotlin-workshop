@@ -36,9 +36,8 @@ fun main() {
                 }
             }
 
-            index()
-            cocktails(dao)
-            ingredients(dao)
+            cocktails()
+//            cocktailsWithLocations(dao)
         }
     }.start(wait = true)
 }
