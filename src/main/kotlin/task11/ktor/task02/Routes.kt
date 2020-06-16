@@ -1,4 +1,4 @@
-package task11.ktor
+package task11.ktor.task02
 
 import io.ktor.application.call
 import io.ktor.locations.Location
@@ -26,20 +26,13 @@ class Cocktails {
     }
 }
 
-fun Route.cocktailsWithLocations(
+fun Route.cocktails(
     dao: CocktailDAO
 ) {
     get<Cocktails> {
         call.respondText { "GET \"/cocktails\"" }
         // TODO: Get and return cocktails
         // call.respond(dao.getCocktails())
-    }
-
-    get<Cocktails.Cocktail> { cocktail ->
-        call.respondText { "GET \"/cocktails/${cocktail.cocktailId}\"" }
-        // TODO: Get and return cocktail
-        // call.respond(dao.getCocktails().ifEmpty { HttpStatusCode.NotFound })
-        // call.respond(dao.getCocktail(UUID.fromString(cocktail.cocktailId)) ?: HttpStatusCode.NotFound)
     }
 
     post<Cocktails> {
@@ -50,6 +43,20 @@ fun Route.cocktailsWithLocations(
         // call.respond(HttpStatusCode.Created)
     }
 
+    // Register routes to handle cocktail parameter
+    cocktail(dao)
+}
+
+fun Route.cocktail(
+    dao: CocktailDAO
+) {
+    get<Cocktails.Cocktail> { cocktail ->
+        call.respondText { "GET \"/cocktails/${cocktail.cocktailId}\"" }
+        // TODO: Get and return cocktail
+        // call.respond(dao.getCocktails().ifEmpty { HttpStatusCode.NotFound })
+        // call.respond(dao.getCocktail(UUID.fromString(cocktail.cocktailId)) ?: HttpStatusCode.NotFound)
+    }
+
     put<Cocktails.Cocktail> { cocktail ->
         call.respondText { "PUT \"/cocktails/${cocktail.cocktailId}\"" }
         // TODO: Update and persist cocktail
@@ -58,10 +65,11 @@ fun Route.cocktailsWithLocations(
         // call.respond(HttpStatusCode.NoContent)
     }
 
-    ingredientsWithLocations(dao)
+    // Register routes to handle ingredients
+    ingredients(dao)
 }
 
-fun Route.ingredientsWithLocations(
+fun Route.ingredients(
     dao: CocktailDAO
 ) {
     get<Cocktails.Cocktail.Ingredients> { ingredients ->
@@ -70,18 +78,25 @@ fun Route.ingredientsWithLocations(
         // call.respond(dao.getIngredients(UUID.fromString(ingredients.parent.cocktailId)) ?: Unit)
     }
 
-    get<Cocktails.Cocktail.Ingredient> { ingredient ->
-        call.respondText { "GET \"/cocktails/${ingredient.parent.cocktailId}/ingredients/${ingredient.ingredientId}\"" }
-        // TODO: Get and return ingredient
-        // call.respond(dao.getIngredient(UUID.fromString(ingredient.ingredientId)) ?: HttpStatusCode.NotFound)
-    }
-
     post<Cocktails.Cocktail.Ingredients> { ingredients ->
         call.respondText { "POST \"/cocktails/${ingredients.parent.cocktailId}/ingredients\"" }
         // TODO: Create and persist ingredient
         // val ingredient = call.receive<CreateIngredientDTO>()
         // dao.createIngredient(ingredient)
         // call.respond(HttpStatusCode.Created)
+    }
+
+    // Register routes to handle ingredient parameter
+    ingredient(dao)
+}
+
+fun Route.ingredient(
+    dao: CocktailDAO
+) {
+    get<Cocktails.Cocktail.Ingredient> { ingredient ->
+        call.respondText { "GET \"/cocktails/${ingredient.parent.cocktailId}/ingredients/${ingredient.ingredientId}\"" }
+        // TODO: Get and return ingredient
+        // call.respond(dao.getIngredient(UUID.fromString(ingredient.ingredientId)) ?: HttpStatusCode.NotFound)
     }
 
     put<Cocktails.Cocktail.Ingredient> { ingredient ->

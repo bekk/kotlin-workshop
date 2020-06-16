@@ -1,5 +1,9 @@
 package task11.ktor
 
+import task11.ktor.task02.CocktailDTO
+import task11.ktor.task02.CreateCocktailDTO
+import task11.ktor.task02.CreateIngredientDTO
+import task11.ktor.task02.IngredientDTO
 import java.util.*
 
 val tequila = IngredientDTO(
