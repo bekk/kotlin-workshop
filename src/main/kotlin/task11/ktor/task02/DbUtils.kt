@@ -1,4 +1,4 @@
-package task11.ktor
+package task11.ktor.task02
 
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
