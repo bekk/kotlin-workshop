@@ -1,10 +1,6 @@
-console.log("Client!");
-
 function getText(id) {
     return document.getElementById(id).value
 }
-
-let result = "";
 
 document.getElementById("run").addEventListener("click", function () {
     let url = getText("url");
@@ -36,6 +32,6 @@ async function doRequest(url, method, payload) {
     }
 
     document.getElementById("requestInfo").innerText = "Request: " + JSON.stringify({url, ...content});
-    return await fetch(url, content);
 
+    return await fetch(url, content);
 }
