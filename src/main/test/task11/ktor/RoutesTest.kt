@@ -10,8 +10,8 @@ import io.ktor.server.testing.withTestApplication
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
-import task11.ktor.task01.mainWithDependencies
 import task11.ktor.task02.CocktailDAO
+import task11.ktor.task02.mainWithDependencies
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
