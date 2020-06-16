@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <title>Super simple REST client</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="requestArea">
+    <form id="request">
+        <label for="url">Path</label>
+        <input type="text" id="url" value="http://localhost:8089/">
+        <label for="method">Method</label>
+        <select id="method">
+            <option value="GET">GET</option>
+            <option value="PUT">PUT</option>
+            <option value="POST">POST</option>
+            <option value="DELETE">DELETE</option>
+        </select>
+        <label for="payload">Body (POST, PUT)</label>
+        <textarea id="payload">{"name" : "margarita"}</textarea>
+        <button id="run" type="button">Run request</button>
+    </form>
+
+</div>
+
+<div id="resultArea">
+    <div id="requestInfo"></div>
+    <div id="responseStatus"></div>
+    <div id="responseBody"></div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="rest-client.js"></script>
+</html>
