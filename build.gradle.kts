@@ -29,9 +29,6 @@ dependencies {
     implementation("com.h2database:h2:1.4.200")
     implementation("com.zaxxer:HikariCP:3.2.0")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.9.7")
-    testCompile("io.ktor:ktor-server-test-host:$ktorVersion")
-    testCompile("io.mockk:mockk:$mockkVersion")
-    testCompile("com.fasterxml.jackson.module:jackson-module-kotlin:2.9.7")
 }
 
 application {
