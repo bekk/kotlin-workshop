@@ -9,14 +9,11 @@ import io.ktor.response.respondText
 import io.ktor.routing.Route
 
 
-@Location("/")
-class Index
-
-@Location("/cocktails")
-class Cocktails {
+@Location("/api/cocktails")
+data class Cocktails(val ingredient: String? = "") {
 
     @Location("/{cocktailId}")
-    data class Cocktail(val cocktailId: String) {
+    data class Cocktail(val parent: Cocktails, val cocktailId: String) {
 
         @Location("/ingredients")
         class Ingredients(val parent: Cocktail)
@@ -30,9 +27,18 @@ fun Route.cocktails(
     dao: CocktailDAO
 ) {
     get<Cocktails> {
-        call.respondText { "GET \"/cocktails\"" }
+        if (it.ingredient.isNullOrEmpty()) {
+            call.respondText { "GET \"/cocktails\"" }
+        } else {
+            call.respondText { "GET \"/cocktails?ingredient=${it.ingredient}\"" }
+        }
+
         // TODO: Get and return cocktails
         // call.respond(dao.getCocktails())
+
+        // TODO: Get cocktails, filter based on ingredient name, then return them
+        // val ingredient = it.ingredient
+        // call.respond(dao.getCocktails().filter { it.ingredients.any { it.name == ingredient} })
     }
 
     post<Cocktails> {
