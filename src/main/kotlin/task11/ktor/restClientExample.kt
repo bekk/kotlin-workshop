@@ -12,6 +12,8 @@ import io.ktor.routing.route
 import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
+import task11.ktor.task02.dataSource
+import task11.ktor.task02.prepopulateDatabase
 import java.io.File
 
 fun main() {
