@@ -1,6 +1,7 @@
 package task11.ktor.task01.taskD
 
 import io.ktor.locations.Location
+import io.ktor.locations.put
 import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
@@ -22,7 +23,10 @@ fun main() {
         setupApplication()
 
         routing {
-            // TODO - Handle POST requests and update your fake database
+
+            put<Root.Cocktails> {
+                // TODO - Handle PUT requests and update your fake database
+            }
         }
     }.start(wait = true)
 }
