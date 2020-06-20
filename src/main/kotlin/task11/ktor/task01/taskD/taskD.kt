@@ -1,5 +1,6 @@
 package task11.ktor.task01.taskD
 
+import io.ktor.locations.KtorExperimentalLocationsAPI
 import io.ktor.locations.Location
 import io.ktor.locations.put
 import io.ktor.routing.routing
@@ -18,6 +19,7 @@ class Root {
     class Cocktails
 }
 
+@KtorExperimentalLocationsAPI
 fun main() {
     embeddedServer(Netty, 8089) {
         setupApplication()

@@ -1,5 +1,6 @@
 package task11.ktor.task01.taskB
 
+import io.ktor.locations.KtorExperimentalLocationsAPI
 import io.ktor.locations.Location
 import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
@@ -14,6 +15,7 @@ class Root {
     // TODO - Create a "/cocktails" location
 }
 
+@KtorExperimentalLocationsAPI
 fun main() {
     embeddedServer(Netty, 8089) {
         setupApplication()

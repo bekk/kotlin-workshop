@@ -1,6 +1,7 @@
 package task11.ktor.task01.taskA
 
 import io.ktor.application.call
+import io.ktor.locations.KtorExperimentalLocationsAPI
 import io.ktor.locations.Location
 import io.ktor.locations.get
 import io.ktor.response.respondText
@@ -18,6 +19,7 @@ class Root {
 
 // TODO - Run the main function and try calling the "/cocktail" endpoint
 
+@KtorExperimentalLocationsAPI
 fun main() {
     embeddedServer(Netty, 8089) {
         setupApplication()
