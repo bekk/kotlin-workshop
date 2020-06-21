@@ -9,7 +9,7 @@ import io.ktor.server.netty.Netty
 import task11.ktor.task01.setupApplication
 import task11.ktor.task02.CocktailDAO
 import task11.ktor.task02.dataSource
-import task11.ktor.task02.prepopulateDatabase
+import task11.ktor.task02.createDbTables
 
 
 @Location("/api/cocktails")
@@ -19,7 +19,7 @@ class Cocktails
 fun main() {
     embeddedServer(Netty, 8089) {
         setupApplication()
-        prepopulateDatabase(dataSource)
+        createDbTables(dataSource)
 
         val dao = CocktailDAO(dataSource)
 

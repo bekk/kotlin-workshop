@@ -1,5 +1,6 @@
 package task11.ktor.task02
 
+import java.sql.Connection
 import java.util.*
 import javax.sql.DataSource
 
@@ -11,47 +12,48 @@ data class IngredientDTO(val id: UUID, val name: String)
 
 class CocktailDAO(val dataSource: DataSource) {
     fun getCocktails(): List<CocktailDTO> {
-        return dataSource
-            .transaction {
-                prepareStatement("SELECT * from cocktail")
-                    .executeQuery()
-                    .map {
-                        val id = UUID.fromString(getString("id"))
-                        CocktailDTO(
-                            id = id,
-                            name = getString("name"),
-                            ingredients = getIngredients(id)
-                        )
-                    }
-            }
+        return dataSource.transaction { Operations.getCocktails(this) }
     }
-
-    fun getCocktail(id: UUID): CocktailDTO? = TODO()
-    fun createCocktail(cocktail: CreateCocktailDTO): CocktailDTO = TODO()
-    fun updateCocktail(cocktail: CocktailDTO): CocktailDTO = TODO()
-    fun deleteCocktail(id: UUID): Unit = TODO()
-
 
     fun getIngredients(cocktailId: UUID): List<IngredientDTO> {
-        return dataSource
-            .transaction {
-                prepareStatement("SELECT * FROM ingredient WHERE cocktail_id = ?")
-                .apply {
-                    setString(1, cocktailId.toString())
-                }
-                .executeQuery()
-                .map {
-                    IngredientDTO(
-                        id = UUID.fromString(getString("id")),
-                        name = getString("name")
-                    )
-                }
+        return dataSource.transaction { Operations.getIngredients(this, cocktailId) }
+    }
 
+    fun createCocktail(cocktail: CreateCocktailDTO): CocktailDTO {
+        return dataSource.transaction { Operations.createCocktail(this, cocktail) }
+    }
+}
+
+private object Operations {
+    fun getCocktails(connection: Connection): List<CocktailDTO> {
+        return connection
+            .prepareStatement("SELECT * from cocktail")
+            .executeQuery()
+            .map {
+                val id = UUID.fromString(getString("id"))
+                CocktailDTO(
+                    id = id,
+                    name = getString("name"),
+                    ingredients = getIngredients(connection, id)
+                )
             }
     }
 
-    fun getIngredient(id: UUID): IngredientDTO? = TODO()
+    fun getIngredients(connection: Connection, cocktailId: UUID): List<IngredientDTO> {
+        return connection
+            .prepareStatement("SELECT * FROM ingredient WHERE cocktail_id = ?")
+            .apply {
+                setString(1, cocktailId.toString())
+            }
+            .executeQuery()
+            .map {
+                IngredientDTO(
+                    id = UUID.fromString(getString("id")),
+                    name = getString("name")
+                )
+            }
+    }
+
+    fun createCocktail(connection: Connection, cocktail: CreateCocktailDTO): CocktailDTO = TODO()
     fun createIngredient(ingredient: CreateIngredientDTO): IngredientDTO = TODO()
-    fun updateIngredient(ingredient: IngredientDTO): IngredientDTO = TODO()
-    fun deleteIngredient(id: UUID): Unit = TODO()
 }
