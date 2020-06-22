@@ -17,7 +17,7 @@ class Root {
     class Cocktail
 }
 
-// TODO - Run the main function and try calling the "/cocktail" endpoint
+// TODO - Run the main function and try calling the "/api/cocktail" endpoint from your browser
 
 @KtorExperimentalLocationsAPI
 fun main() {
