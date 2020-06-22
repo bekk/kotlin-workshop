@@ -8,6 +8,7 @@ import io.ktor.application.Application
 import io.ktor.application.ApplicationStarted
 import io.ktor.application.install
 import io.ktor.features.ContentNegotiation
+import io.ktor.http.content.default
 import io.ktor.http.content.files
 import io.ktor.http.content.static
 import io.ktor.http.content.staticRootFolder
@@ -29,9 +30,10 @@ fun Application.setupApplication() {
         }
     }
     routing {
-        static("static") {
+        static {
             staticRootFolder = File("src/main/kotlin/task11/ktor")
             files("resources/")
+            default("resources/index.html")
         }
     }
 
