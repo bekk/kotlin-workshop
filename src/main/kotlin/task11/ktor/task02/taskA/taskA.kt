@@ -11,6 +11,8 @@ import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import task11.ktor.task01.setupApplication
 import task11.ktor.task02.CocktailDAO
+import task11.ktor.task02.createDbTables
+import task11.ktor.task02.dataSource
 
 
 @Location("/api/cocktails")
@@ -20,12 +22,13 @@ class Cocktails
 fun main() {
     embeddedServer(Netty, 8089) {
         setupApplication()
-
-        // TODO - Add some cocktails to the DB at startup
-        // Hint: Implement the prepopulateDatabase function in DbUtils and run it on app-startup
+        createDbTables(dataSource)
 
         // TODO - Instantiate a DAO for cocktails and connect it to the datasource used for the DB
         val dao = TODO()
+
+        // TODO - Add some cocktails to the DB at startup
+        // Hint: Use dao.createCocktail() after implementing DocktailDAO.Operations.createCocktail
 
         routing {
             cocktails(dao)
