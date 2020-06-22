@@ -11,6 +11,15 @@ import task11.ktor.task02.CocktailDAO
 import task11.ktor.task02.dataSource
 import task11.ktor.task02.createDbTables
 
+/**
+ * For our last database task we'll try something more complex.
+ * We'll be searching the database for cocktails matching an ingredient.
+ *
+ * TODO:
+ *  Prepopulate the database with a few more cocktails and make and endpoint to search for cocktails matching the same
+ *  ingredient.
+ *  Tip: Take a look at DbUtils.kt for existing ingredients.
+ */
 @Location("/api/cocktails")
 data class Cocktails(val ingredient: String = "")
 
@@ -21,6 +30,8 @@ fun main() {
         createDbTables(dataSource)
 
         val dao = CocktailDAO(dataSource)
+
+        // TODO - Add some more cocktails with some of the same ingredients
 
         routing {
             cocktails(dao)

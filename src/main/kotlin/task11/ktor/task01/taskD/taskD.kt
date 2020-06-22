@@ -8,8 +8,16 @@ import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import task11.ktor.task01.setupApplication
 
-// TODO - Create a fake database and populate it
-// Hint: Use something simple to represent the DB - for example a mutable collection
+/**
+ * For our fourth task we'll mimic a database and let the user store some data.
+ *
+ * TODO:
+ *  Create a fake database and populate it
+ *  Hint: Use something simple to represent the DB, we don't need to persist state between restarts so a
+ *  mutable collection will work wonders.
+ *
+ *  Bonus: Add a GET endpoint to retrieve the stored cocktails
+ */
 
 
 @Location("/api")
