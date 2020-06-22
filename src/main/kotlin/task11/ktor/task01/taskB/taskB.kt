@@ -7,7 +7,17 @@ import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import task11.ktor.task01.setupApplication
 
-// TODO - Create a list of cocktails to return, using the CocktailDTO class available in this project
+/**
+ * The second task is to make your own API!
+ * Remember you can use the REST-client at http://localhost:8089 test your request
+ *
+ * Documentation for routing can be found at https://ktor.io/servers/features/locations.html
+ *
+ * TODO:
+ *  Lets create some more cocktails! Use the CocktailDTO class available in this project to create cocktails and return
+ *  a list of them at /api/cocktails
+ *  Tip: Look at the previous
+ */
 
 @Location("/api")
 class Root {

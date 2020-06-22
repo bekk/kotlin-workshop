@@ -12,6 +12,15 @@ import task11.ktor.task02.dataSource
 import task11.ktor.task02.createDbTables
 
 
+/**
+ * We need more endpoints for our database rest API.
+ * In this task we'll set up a few endpoints for storing and retrieving data.
+ *
+ * TODO:
+ *  Get familiarized with CocktailDAO and use the DAO to store and retrieve cocktails.
+ *  Add a put endpoint for storing cocktails
+ *  Add a get endpoint to retrieve cocktails
+ */
 @Location("/api/cocktails")
 class Cocktails
 

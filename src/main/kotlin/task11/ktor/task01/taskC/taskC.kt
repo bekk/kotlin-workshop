@@ -13,6 +13,11 @@ val margarita = CocktailDTO(UUID.randomUUID(), "Margarita", emptyList())
 val whiskeySour = CocktailDTO(UUID.randomUUID(), "Whiskey sour", emptyList())
 val cocktails = listOf(margarita, whiskeySour)
 
+/**
+ * It's time to make this more interesting, lets add a way for a user to find the cocktail they're looking for.
+ *
+ * Lets work with query parameters!
+ */
 @Location("/api")
 class Root {
 
