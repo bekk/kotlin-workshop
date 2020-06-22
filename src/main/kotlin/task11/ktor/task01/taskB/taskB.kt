@@ -9,7 +9,7 @@ import task11.ktor.task01.setupApplication
 
 /**
  * The second task is to make your own API!
- * Remember you can use the REST-client at http://localhost:8089 test your request
+ * Remember you can use the REST-client at http://localhost:8089 to test your request
  *
  * Documentation for routing can be found at https://ktor.io/servers/features/locations.html
  *
