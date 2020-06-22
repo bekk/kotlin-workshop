@@ -55,5 +55,5 @@ private object Operations {
     }
 
     fun createCocktail(connection: Connection, cocktail: CreateCocktailDTO): CocktailDTO = TODO()
-    fun createIngredient(ingredient: CreateIngredientDTO): IngredientDTO = TODO()
+    fun createIngredient(connection: Connection, cocktailId: UUID, ingredient: CreateIngredientDTO): IngredientDTO = TODO()
 }
