@@ -4,7 +4,7 @@ import java.sql.Connection
 import java.util.*
 import javax.sql.DataSource
 
-data class CreateCocktailDTO(val name: String, val ingredient: List<CreateIngredientDTO>)
+data class CreateCocktailDTO(val name: String, val ingredients: List<CreateIngredientDTO>)
 data class CreateIngredientDTO(val name: String)
 
 data class CocktailDTO(val id: UUID, val name: String, val ingredients: List<IngredientDTO>)
