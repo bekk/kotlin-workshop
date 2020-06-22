@@ -9,7 +9,7 @@
 <div id="requestArea">
     <form id="request">
         <label for="url">Path</label>
-        <input type="text" id="url" value="http://localhost:8089/">
+        <input type="text" id="url" value="http://localhost:8089/api/cocktail">
         <label for="method">Method</label>
         <select id="method">
             <option value="GET">GET</option>
@@ -19,7 +19,7 @@
         </select>
         <label for="payload">Body (POST, PUT)</label>
         <textarea id="payload">{"name" : "margarita"}</textarea>
-        <button id="run" type="button">Run request</button>
+        <button id="run">Run request</button>
     </form>
 
 </div>
@@ -27,7 +27,7 @@
 <div id="resultArea">
     <div id="requestInfo"></div>
     <div id="responseStatus"></div>
-    <div id="responseBody"></div>
+    <pre id="responseBody"></pre>
 </div>
 
 </body>

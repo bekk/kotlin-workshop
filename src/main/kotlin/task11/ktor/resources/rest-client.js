@@ -2,7 +2,8 @@ function getText(id) {
     return document.getElementById(id).value
 }
 
-document.getElementById("run").addEventListener("click", function () {
+document.getElementById("request").addEventListener("submit", function (event) {
+    event.preventDefault();
     let url = getText("url");
     let method = getText("method");
     let payload = getText("payload");

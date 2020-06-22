@@ -39,8 +39,7 @@ fun main() {
         // TODO - Instantiate the DAO for cocktails (CocktailDAO.kt) and connect it to the datasource used for the DB
         val dao = TODO()
 
-        // TODO - Add some cocktails to the DB at startup
-        // Hint: Use dao.createCocktail() after implementing DocktailDAO.Operations.createCocktail
+        // TODO - Implement CocktailDAO.Operations.createCocktail and add some cocktails to the DB at startup
 
         routing {
             cocktails(dao)

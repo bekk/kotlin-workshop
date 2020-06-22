@@ -9,8 +9,8 @@ import task11.ktor.task01.setupApplication
 import task11.ktor.task02.CocktailDTO
 import java.util.*
 
-val margarita = CocktailDTO(UUID.randomUUID(), "Margarita", emptyList())
-val whiskeySour = CocktailDTO(UUID.randomUUID(), "Whiskey sour", emptyList())
+val margarita = CocktailDTO(UUID.fromString("43ce0fcf-4841-46c6-9615-c62dc316b235"), "Margarita", emptyList())
+val whiskeySour = CocktailDTO(UUID.fromString("86244078-ce6f-4648-b6aa-6c8da25a3f61"), "Whiskey sour", emptyList())
 val cocktails = listOf(margarita, whiskeySour)
 
 /**
