@@ -37,7 +37,7 @@ fun main() {
 
         routing {
             get<Root.Cocktail> {
-                call.respondText { "Imma here!" }
+                call.respondText("Imma here!")
             }
         }
     }.start(wait = true)
