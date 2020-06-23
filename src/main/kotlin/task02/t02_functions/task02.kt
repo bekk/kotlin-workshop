@@ -2,7 +2,7 @@ package task02.t02_functions
 
 
 fun main() {
-    
+
     val SolutionBox = Solution.createBoxUsingWidthLengthHeight(10, 10,10)
     lateinit var Box: Box
 
@@ -11,7 +11,7 @@ fun main() {
             Box = createBox()
             true
         },
-        {SolutionBox.height == Box.height && SolutionBox.length == Box.lenght && SolutionBox.width == Box.width }
+        {SolutionBox.height == Box.height && SolutionBox.length == Box.length && SolutionBox.width == Box.width }
     )
 }
 
