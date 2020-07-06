@@ -5,7 +5,7 @@ fun main() {
 
     val box = createBoxWrapper(15)
     utils.tests("",
-        { box.height == 15 && box.lenght == 10 && box.width == 10 }
+        { box.height == 15 && box.length == 10 && box.width == 10 }
     )
 }
 
