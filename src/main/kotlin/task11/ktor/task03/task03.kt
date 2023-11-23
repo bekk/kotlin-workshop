@@ -1,22 +1,22 @@
 package task11.ktor.task03
 
 
+import io.ktor.server.application.call
+import io.ktor.server.application.install
+import io.ktor.server.routing.routing
+import io.ktor.server.response.respond
+import io.ktor.server.locations.KtorExperimentalLocationsAPI
+import io.ktor.server.locations.Location
+import io.ktor.server.locations.Locations
+import io.ktor.server.locations.get
+import io.ktor.client.plugins.json.JacksonSerializer
+import io.ktor.client.plugins.json.JsonFeature
 import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
-import io.ktor.application.call
-import io.ktor.application.install
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.engine.apache.Apache
 import io.ktor.client.engine.apache.ApacheEngineConfig
-import io.ktor.client.features.json.JacksonSerializer
-import io.ktor.client.features.json.JsonFeature
-import io.ktor.locations.KtorExperimentalLocationsAPI
-import io.ktor.locations.Location
-import io.ktor.locations.Locations
-import io.ktor.locations.get
-import io.ktor.response.respond
-import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import task11.ktor.task01.setupApplication
