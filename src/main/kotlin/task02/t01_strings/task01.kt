@@ -1,14 +1,12 @@
 package task02.t01_strings
 
-
 fun main() {
-
-    utils.tests("",
+    utils.tests(
+        "",
         { "Ola Nordmann" == formatFirstAndSurname("Ola", "Nordmann") },
-        { Solution.formatFirstNameAndSurnam("Ola", "Nordmann") == formatFirstAndSurname("Ola", "Nordmann") }
+        { Solution.formatFirstNameAndSurnam("Ola", "Nordmann") == formatFirstAndSurname("Ola", "Nordmann") },
     )
 }
-
 
 /**
  * Task 1:
@@ -18,6 +16,5 @@ fun main() {
  *
  */
 
-
 // TODO: Implement formatFirstAndSurname as "{first name} {surname}"
-fun formatFirstAndSurname( firstName: String,  surname: String ): String = TODO()
+fun formatFirstAndSurname(firstName: String, surname: String): String = TODO()

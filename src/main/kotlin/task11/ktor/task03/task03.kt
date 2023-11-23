@@ -1,6 +1,6 @@
 package task11.ktor.task03
 
-
+/*
 import io.ktor.server.application.call
 import io.ktor.server.application.install
 import io.ktor.server.routing.routing
@@ -79,3 +79,4 @@ fun main() {
         }
     }.start(wait = true)
 }
+*/

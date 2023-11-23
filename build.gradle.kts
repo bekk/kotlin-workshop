@@ -18,7 +18,7 @@ repositories {
     mavenCentral()
 }
 
-sourceSets {
+/*sourceSets {
     main {
         java {
             srcDirs(
@@ -37,10 +37,10 @@ sourceSets {
             )
         }
     }
-}
+}*/
 
-// sourceSets["main"].java.srcDir("src/main/kotlin")
-// sourceSets["test"].java.srcDir("src/main/test")
+sourceSets["main"].java.srcDir("src/main/kotlin")
+sourceSets["test"].java.srcDir("src/main/test")
 
 dependencies {
     implementation(kotlin("stdlib"))
@@ -48,6 +48,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
     implementation("io.ktor:ktor-server-netty-jvm:2.3.6")
     implementation("io.ktor:ktor-client-apache-jvm:2.3.6")
+    implementation("io.ktor:ktor-server-content-negotiation:2.3.6")
     implementation("io.ktor:ktor-client-jackson-jvm:2.3.6")
     implementation("io.ktor:ktor-server-locations-jvm:2.3.6")
     implementation("io.ktor:ktor-serialization-jackson:2.3.6")
