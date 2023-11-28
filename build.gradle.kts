@@ -18,27 +18,6 @@ repositories {
     mavenCentral()
 }
 
-/*sourceSets {
-    main {
-        java {
-            srcDirs(
-                listOf(
-                    "src/main/kotlin",
-                ),
-            )
-        }
-    }
-    test {
-        java {
-            srcDirs(
-                listOf(
-                    "src/test/kotlin",
-                ),
-            )
-        }
-    }
-}*/
-
 sourceSets["main"].java.srcDir("src/main/kotlin")
 sourceSets["test"].java.srcDir("src/main/test")
 
@@ -57,22 +36,7 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.16.0")
 }
 
-/* application {
-    mainClassName = "no.bekk.kotlinworkshop.Task1Kt"
-}*/
-
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "17"
     kotlinOptions.freeCompilerArgs += listOf("-XXLanguage:+InlineClasses")
 }
-
-/*tasks.withType<Jar> {
-    /* manifest {
-        attributes["Main-Class"] = application.mainClassName
-    }*/
-    from(
-        configurations.runtime.get().map {
-            if (it.isDirectory) it else zipTree(it)
-        },
-    )
-}*/
