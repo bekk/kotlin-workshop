@@ -10,3 +10,7 @@ package task04.t02_sealedClasses
 fun main() {
 
 }
+
+fun handleResult(result: Result): String {
+    return ""
+}
