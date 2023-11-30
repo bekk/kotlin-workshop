@@ -20,9 +20,6 @@ fun main() {
 
 @OptIn(ExperimentalContracts::class)
 fun isNonNullString(input: Any?): Boolean {
-    /* contract {
-        returns(true) implies (input is String)
-    }*/
     return input is String
 }
 
