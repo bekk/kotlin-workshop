@@ -35,11 +35,14 @@ fun main() {
 
 sealed class Result
 
+data class Success(val value: String) : Result()
+data class Error(val exception: Exception) : Result()
+
 fun returnSuccess(): Any {
-    return Result // <- Replace this with a Success object
+    return Success("Test") // <- Replace this with a Success object
 }
 
 fun returnError(): Any {
     val exception = Exception("Error")
-    return Result // <- Replace this with an Error object
+    return Error(exception) // <- Replace this with an Error object
 }
