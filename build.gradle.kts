@@ -28,12 +28,14 @@ dependencies {
     implementation("io.ktor:ktor-server-netty-jvm:2.3.6")
     implementation("io.ktor:ktor-client-apache-jvm:2.3.6")
     implementation("io.ktor:ktor-server-content-negotiation:2.3.6")
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.6")
     implementation("io.ktor:ktor-client-jackson-jvm:2.3.6")
     implementation("io.ktor:ktor-server-locations-jvm:2.3.6")
     implementation("io.ktor:ktor-serialization-jackson:2.3.6")
     implementation("com.h2database:h2:2.2.224")
     implementation("com.zaxxer:HikariCP:5.1.0")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.16.0")
+    implementation("ch.qos.logback:logback-classic:1.2.11")
 }
 
 tasks.withType<KotlinCompile> {
