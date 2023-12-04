@@ -1,24 +1,17 @@
 package task11.ktor.task03
 
-/*
-import io.ktor.server.application.call
-import io.ktor.server.application.install
-import io.ktor.server.routing.routing
-import io.ktor.server.response.respond
-import io.ktor.server.locations.KtorExperimentalLocationsAPI
-import io.ktor.server.locations.Location
-import io.ktor.server.locations.Locations
-import io.ktor.server.locations.get
-import io.ktor.client.plugins.json.JacksonSerializer
-import io.ktor.client.plugins.json.JsonFeature
-import com.fasterxml.jackson.databind.DeserializationFeature
-import com.fasterxml.jackson.module.kotlin.registerKotlinModule
-import io.ktor.client.HttpClient
-import io.ktor.client.HttpClientConfig
-import io.ktor.client.engine.apache.Apache
-import io.ktor.client.engine.apache.ApacheEngineConfig
-import io.ktor.server.engine.embeddedServer
-import io.ktor.server.netty.Netty
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+import io.ktor.client.*
+import io.ktor.client.engine.apache.*
+import io.ktor.client.plugins.contentnegotiation.*
+import io.ktor.serialization.jackson.*
+import io.ktor.server.application.*
+import io.ktor.server.engine.*
+import io.ktor.server.locations.*
+import io.ktor.server.netty.*
+import io.ktor.server.response.*
+import io.ktor.server.routing.*
 import task11.ktor.task01.setupApplication
 
 /**
@@ -28,15 +21,11 @@ import task11.ktor.task01.setupApplication
  */
 
 class CocktailClient {
-    private val config: HttpClientConfig<ApacheEngineConfig>.() -> Unit = {
-        install(JsonFeature) {
-            serializer = JacksonSerializer {
-                registerKotlinModule()
-                configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
-            }
+    private val client = HttpClient(Apache) {
+        install(ContentNegotiation) {
+            jackson()
         }
     }
-    private val httpClient = HttpClient(Apache, config)
     private val cocktailDbEndpoint = "https://www.thecocktaildb.com/api/json/v1/1/search.php"
 
     /**
@@ -46,37 +35,33 @@ class CocktailClient {
      * The response will be of type Drinks, and you must map this response to a list of Strings.
      */
 
-    fun getCocktail(cocktailName: String): List<String>? {
+    fun getCocktail(cocktailName: String): Drinks {
         TODO()
     }
 }
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 data class Drinks(
-    val drinks: List<Drink>?
+    val drinks: List<Drink>?,
 )
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 data class Drink(
     val idDrink: String,
-    val strDrink: String
+    val strDrink: String,
 )
-
 
 @KtorExperimentalLocationsAPI
 fun main() {
     val cocktailClient = CocktailClient()
 
-    @Location("/cocktail/findCocktail")
-    data class CocktailRequest(val cocktail: String)
-
     embeddedServer(Netty, 8089) {
         setupApplication()
-        install(Locations)
         routing {
-            get<CocktailRequest> { cocktailRequest ->
-                val cocktailNames = cocktailClient.getCocktail(cocktailRequest.cocktail)
-                call.respond(cocktailNames?.joinToString(",") ?: "Sorry, I don't know that cocktail :(")
+            get("/cocktails/{cocktail}") {
+                val cocktail: String = call.parameters["cocktail"] ?: "You must specify a cocktail"
+                call.respond(cocktailClient.getCocktail(cocktail))
             }
         }
     }.start(wait = true)
 }
-*/
