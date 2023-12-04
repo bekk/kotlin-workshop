@@ -25,7 +25,7 @@ dependencies {
     implementation(kotlin("stdlib"))
     implementation("junit:junit:4.13.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
-    implementation("io.ktor:ktor-server-netty-jvm:2.3.6")
+    implementation("io.ktor:ktor-server-netty-jvm:$ktorVersion")
     implementation("io.ktor:ktor-client-apache-jvm:2.3.6")
     implementation("io.ktor:ktor-server-content-negotiation:2.3.6")
     implementation("io.ktor:ktor-client-content-negotiation:2.3.6")
