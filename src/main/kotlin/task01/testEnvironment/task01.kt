@@ -10,8 +10,9 @@ import utils.tests
  *   Test 1 - Success!
  */
 fun main() {
-    tests("Test environment",
-        { task01() }
+    tests(
+        "Test environment",
+        { task01() },
     )
 }
 

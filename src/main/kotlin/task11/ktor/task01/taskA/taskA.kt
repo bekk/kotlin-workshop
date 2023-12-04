@@ -1,11 +1,11 @@
 package task11.ktor.task01.taskA
 
-import io.ktor.application.call
-import io.ktor.locations.KtorExperimentalLocationsAPI
-import io.ktor.locations.Location
-import io.ktor.locations.get
-import io.ktor.response.respondText
-import io.ktor.routing.routing
+import io.ktor.server.application.call
+import io.ktor.server.routing.routing
+import io.ktor.server.response.respondText
+import io.ktor.server.locations.KtorExperimentalLocationsAPI
+import io.ktor.server.locations.Location
+import io.ktor.server.locations.get
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 import task11.ktor.task01.setupApplication
