@@ -1,4 +1,4 @@
-package task04.dataClasses
+package task04.t01_dataClasses
 
 
 import utils.tests

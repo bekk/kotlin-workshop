@@ -1,4 +1,4 @@
-package task04.dataClasses
+package task04.t01_dataClasses
 
 import utils.classEqualFieldNamesAndTypes
 import utils.tests
@@ -6,7 +6,8 @@ import utils.tests
 fun main() {
 
     tests("data class",
-        { classEqualFieldNamesAndTypes(Solution.task1("The Wine", 2019, "The Winery", 10),
+        { classEqualFieldNamesAndTypes(
+            Solution.task1("The Wine", 2019, "The Winery", 10),
             task1("The Wine", 2019, "The Winery", 10)
         ) }
     )
